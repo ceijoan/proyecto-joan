@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Página inicial del Manual del diseñador</title>
+    <style>
+        
+        p{
+            font-family:Arial, Helvetica, sans-serif;
+        }
+        h1{
+            text-align: center;
+        }
+        #content{
+            display: flex;
+            justify-content: space-around;
+        }
+        .box{
+            width: 400px;
+            border: 1px solid #000000;
+            margin: 10px;
+            padding: 10px;
+            text-align: center;
+            box-shadow: 5px 5px 11px 1px rgb(0 0 0 / 50%);
+        }
+        .box img{
+            width: 100%;
+            height: 200px;
+        }
+        .box a{
+            background-color: rgb(138, 43, 226);
+            color: #ffffff;
+            text-align: center;
+            width: 100%;
+            text-decoration: none;
+            padding: 5px 20px;
+        }
+        .box a:hover{
+            background-color:salmon;
+        }
+        .box p{
+            font-size: 15px;
+        }
+        .box p strong{
+            font-size: 15px;
+            font-weight: 700;
+            text-transform: uppercase;
+        }
+    </style>
+</head>
+<body>
+    <h1>Manual del diseñador Web</h1>
+    <div id="content">
+        <div class="box">
+            <img src="img/paso1.jpg" alt="">
+            <h2>Paso 1</h2>
+            <p><strong>Crear Sitio Web:</strong><br> Conocé el proceso que tiene que realizar un diseñador para poder hacer su página.</p>
+            <a href="paso1.html" target="_blank" rel="noopener noreferrer">Como crer web</a>
+        </div>
+        <div class="box">
+            <img src="img/paso2.jpg" alt="">
+            <h2>Paso 2</h2>
+            <p><strong>Publicar tu web en internet:</strong><br> Ahora mira el paso a paso que tiene que seguir un diseñador web para subir su página web antes creada y se pueda ver en internet.</p>
+            <a href="paso2.html" target="_blank" rel="noopener noreferrer">Como publico mi diseño en internet</a>
+        </div>
+        <div class="box">
+            <img src="img/paso3.jpg" alt="">
+            <h2>Paso 3</h2>
+            <p><strong>Como se puede ver desde cualquier computador:</strong><br> Por último, es el paso a paso de como un usuario cualquiera entra desde su dispositivo electronico, busca en internet y encuentra el sitio web que creamos y subimos a internet.</p>
+            <a href="paso3.html" target="_blank" rel="noopener noreferrer">Como me encuentran en internet</a>
+        </div>
+    </div>    
+</body>
+</html>
