@@ -1,0 +1,90 @@
+.box{
+    height: 100px;
+    width: 100px;
+    background-color: orange;
+    border: 3px solid #000000;
+    border-radius: 5px;
+    margin:0 0 10px 0 ;
+}
+    .flexx{
+        display: flex;
+        gap:10px;
+
+        color: #ffffff;
+        filter: drop-shadow(2px 2px 2px rgba(0,0,0,0.5));
+        font-weight: bold;
+        font-size: x-large;
+    }
+    .ej1{
+        /*Dice en que orden deben oir alineados los hijos*/
+        flex-direction: row-reverse;/*deizquierda a derecha ej: 6,5,4,3,2,1*/
+        /*flex-direction:row; de izquierda a derecha ej: 1,2,3,4,5,6 */ 
+       /*flex-direction: column; de arriba a bajo en el mismo orden ej:1,2,3,4,5,6*/
+       /*flex-direction: column; de bajo a arriba invirtiendi el orden ej:6,5,4,3,2,1*/
+    }
+    .ej2{
+        flex-wrap:wrap; /*acomoda las cajas en el espacio de la pantalla*/
+        /*flex-wrap:wrap-reverse; acomoda las cajas en el espacio de la pantalla pero de atras para delante*/
+        /*flex-wrap: nowrap;los acomoda por defecto en el espacio de la pantalla*/
+    }
+    .ej3{
+        /*justify-content: flex-start;*/
+        /*justify-content: flex-end;*/
+        justify-content: center;
+        /*justify-content:space-evenly; Genera el espaciado de todos los elementos de manera proporcional*/
+        /*justify-content: space-around; Alinea los elementos cuando tienen espacio a su alrededor*/
+        /*justify-content:space-between; Alinea los elementos hacia los costados*/
+        align-items: center;
+    }
+        .purplebox{
+            background-color: purple;
+            padding: 5px;
+            height: 600px;
+        }
+
+    .ej4{
+        flex-direction: column;
+        align-items: center;
+        /*justify-content: flex-start;*/
+        /*justify-content: flex-end;*/
+        /*justify-content: center;*/
+        /*justify-content: space-between;*/
+        /*justify-content:space-evenly; Genera el espaciado de todos los elementos de manera proporcional*/
+
+    }
+    .chocolatebox{
+        background-color: chocolate;
+        padding: 5px;
+        height: 600px;
+    }
+        .self-end{
+            align-self: flex-end;
+        }
+        .self-start{
+            align-self:flex-start ;
+        }
+        .purplebox2{
+            background-color: purple;
+            padding: 5px;
+        }
+.box2{
+    display: flex;
+    height: 100px;
+    align-items: center;
+    justify-content: center;
+    flex-grow: 1;
+    background-color: orange;
+    border: 3px solid #000000;
+    border-radius: 5px;
+    margin:0 0 10px 0 ;
+
+    box-shadow: inset 10px 10px 10px rgba(0,0,0,0.5);/*INSET para poner la sombra para dentro*/
+}
+    .flex-grow2{
+        flex-grow: 2;
+    }
+    /*hand drawn , estilos para los bordes*/
+    .handborder{
+        border: solid 5px rgb(0, 0, 0);
+        border-radius: 255px 15px 225px / 15px 225px 15px;
+    }

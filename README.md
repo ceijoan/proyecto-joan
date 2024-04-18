@@ -4,4 +4,6 @@
 Content - Paddin - border - margin
 
 ![Ejemplo de como se ve el box model]
-![[def]](/clases/img-box-model.jpg)
+![[def]][imagen de boxmodel]
+
+[imagen de boxmodel]: /clases/img-box-model.jpg
