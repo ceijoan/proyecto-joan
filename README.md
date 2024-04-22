@@ -7,3 +7,12 @@ Content - Paddin - border - margin
 ![[def]][imagen de boxmodel]
 
 [imagen de boxmodel]: /clases/img-box-model.jpg
+
+Box-sizing:border-box; para decir al codigo que tome el padding como parte del contenedor.
+
+Links para ejecicio de FLEX:
+https://codepen.io/enxaneta/full/adLPwv/
+
+Link para descargar el normalize: o limpiador de codigo de navegadores.
+https://necolas.github.io/normalize.css/
+

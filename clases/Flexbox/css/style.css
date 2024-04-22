@@ -16,7 +16,7 @@
         font-size: x-large;
     }
     .ej1{
-        /*Dice en que orden deben oir alineados los hijos*/
+        /*Dice en que orden deben ir alineados los hijos; de izquierda a derecha o de arriba a bajo*/
         flex-direction: row-reverse;/*deizquierda a derecha ej: 6,5,4,3,2,1*/
         /*flex-direction:row; de izquierda a derecha ej: 1,2,3,4,5,6 */ 
        /*flex-direction: column; de arriba a bajo en el mismo orden ej:1,2,3,4,5,6*/
@@ -27,14 +27,14 @@
         /*flex-wrap:wrap-reverse; acomoda las cajas en el espacio de la pantalla pero de atras para delante*/
         /*flex-wrap: nowrap;los acomoda por defecto en el espacio de la pantalla*/
     }
-    .ej3{
+    .ej3{/*Alinea en el eje pincipal - horizontal */
         /*justify-content: flex-start;*/
         /*justify-content: flex-end;*/
         justify-content: center;
         /*justify-content:space-evenly; Genera el espaciado de todos los elementos de manera proporcional*/
         /*justify-content: space-around; Alinea los elementos cuando tienen espacio a su alrededor*/
         /*justify-content:space-between; Alinea los elementos hacia los costados*/
-        align-items: center;
+        align-items: center;/*alinea los elementos hijos al centro */
     }
         .purplebox{
             background-color: purple;
