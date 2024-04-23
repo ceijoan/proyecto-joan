@@ -13,6 +13,8 @@ Box-sizing:border-box; para decir al codigo que tome el padding como parte del c
 Links para ejecicio de FLEX:
 https://codepen.io/enxaneta/full/adLPwv/
 
-Link para descargar el normalize: o limpiador de codigo de navegadores.
+Link para descargar el normalize: o limpiador de codigo de todos los navegadores.
 https://necolas.github.io/normalize.css/
+
+El reset de estilos debe hacer mas trabajo ya que se le deben poner todos los estilos.
 
