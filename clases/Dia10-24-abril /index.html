@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;/*por defecto es content box nosotros cambiamos a Border-box*/
+        }
+        .container{
+            display: flex;
+            margin-bottom: 20px;
+        }
+        .container2{
+            display: flex;
+            margin-bottom: 20px;
+            position: relative;
+        }
+        .box{
+            width: 100px;
+            height: 100px;
+            background-color: f0f0f0;
+            border: 1px solid #ccc;
+        }
+        .yellow{
+            background-color: yellow;
+            top: 20px;
+            left: 20px;
+        }
+        .red{
+            background-color: red;
+            right: 20px;
+            bottom: 20px;
+        }
+        .static{
+            position: static;
+        }
+        .relative{
+            position: relative;
+        }
+        .absolut{
+            position: absolute;
+        }
+        .fixed{
+            position: fixed;
+        }
+        .sticky{
+            position: sticky;
+        }
+
+    </style>
+</head>
+<body>
+    <h2>Position STATIC</h2>
+    <p>Posición por default sin propiedades. Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatibus iure voluptates dolore sed at neque in iusto cumque. Explicabo, amet magni? Odit praesentium magnam possimus nisi harum animi, quas doloremque.</p>
+    <div class="container">
+        <div class="box"></div>
+        <div class="box yellow static">STATIC</div>
+        <div class="box"></div>
+    </div>
+
+    <h2>Position Relative</h2>
+    <p>Si afecta el position(top, right, left,bottom) ocupa espacio en la página</p>
+    <div class="container">
+        <div class="box"></div>
+        <div class="box yellow relative">RELATIVE</div>
+        <div class="box"></div>
+    </div>
+
+    <h2>Position Absolut</h2>
+    <p>Si afecta el position(top, right, left,bottom) NO ocupa espacio en la página, se posiciona respecto al padre mas cercano que tenga un a propiedad distinta a estatic</p>
+    <div class="container2">
+        <div class="box"></div>
+        <div class="box yellow absolut">Absolut</div>
+        <div class="box"></div>
+    </div>
+
+    <h2>Position Fixed</h2>
+    <p>Si afecta el position(top, right, left,bottom) NO ocupa espacio en la página, se posiciona respecto al navegador y permanece fijo en la pantalla</p>
+    <div class="container">
+        <div class="box"></div>
+        <div class="box red fixed">Fixed</div>
+        <div class="box"></div>
+    </div>
+
+    <h2>Position Sticky</h2>
+    <p>Si afecta el position(top, right, left,bottom) Se posiciona respecto a la ventana del navegador, se mantiene fijo en pantalla, hasta que el elemento padre se va de la pantalla</p>
+    <div class="container">
+        <div class="box"></div>
+        <div class="box yellow sticky">Sticky</div>
+        <div class="box"></div>
+    </div>
+</body>
+</html>

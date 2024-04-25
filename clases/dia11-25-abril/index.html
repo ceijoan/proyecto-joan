@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Layout 4 (navegacion)</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        .navbar{
+            display: flex;
+            justify-content: space-between;
+            background-color: gray;
+            color: #fff;
+            padding: 10px 20px;
+        }
+        .logo{
+            font-weight: bold;
+        }
+        .logo a{
+            text-decoration: none;
+            color: #fff;
+        }
+        .menu{
+            display: flex;
+            list-style: none;
+            gap: 20px;
+        }
+        .menu li{
+            
+        }
+        .menu li a{
+            text-decoration: none;
+            color: #fff;
+        }
+        .dropdown{
+            position: relative;
+        }
+        .dropdown:hover .dropdown-menu{
+            display: block;
+            position: absolute;
+        }
+        .dropdown-menu{
+            display: none;
+            list-style: none;
+            width: 140px;
+            background-color: gray;
+            top: 100%;
+            left: -40px;
+            padding: 10px;
+
+        }
+        .dropdown-menu li{
+            margin: 10px;
+            flex-direction: column;
+            
+        }
+        .dropdown-menu li a{
+            color:bisque;
+            text-decoration: underline;
+        }
+       
+    </style>
+</head>
+<body>
+    <dev class="navbar">
+        <div class="logo">
+            <a href="./" title="Logo-web">Logo</a>
+        </div>
+        <ul class="menu">
+            <li><a href="#">Opcion 1</a></li>
+            <li><a href="#">Opcion 2</a></li>
+            <li><a href="#">Opcion 3</a></li>
+            <li class="dropdown">
+                <a href="#">Opcion 4</a>
+                <ul class="dropdown-menu">
+                    <li><a href="#">Servicio</a></li>
+                    <li><a href="#">Servicio</a></li>
+                    <li><a href="#">Servicio</a></li>
+                </ul>   
+            </li>
+            <li><a href="#">Opcion 5</a></li>
+        </ul>
+
+    </dev>
+</body>
+</html>

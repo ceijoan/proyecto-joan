@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Position gatito</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            color: #fff;
+            text-shadow: 2px 2px 0 #000 ;
+        }
+        .container{
+            display:flex;
+            position: relative;
+        }
+        img{
+            width: 100%;
+            filter: blur(2px)
+
+        }
+        .center{
+            position: absolute;
+            border: 1px solid salmon;
+            text-align: center;
+            top: 50%;
+            width: 100%;
+        }
+        .topleft{
+            position: absolute;
+            left: 0;
+            top: 0;
+        }
+        .topright{
+            position: absolute;
+            right: 0;
+            top: 0;
+        }
+        .bottomleft{
+            position: absolute;
+            left: 0;
+            bottom: 0;
+        }
+        .bottomright{
+            position: absolute;
+            right: 0;
+            bottom: 0;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <img src="https://fastly.picsum.photos/id/219/5000/3333.jpg?hmac=nQIYAD6CmzCXEG3xtEckzbu3iauIE3DpHiqnQy3gdG4" alt="GATITO">
+        <div class="center">Center</div>
+        <div class="topleft">Arriba - Izquierda</div>
+        <div class="topright">Arriba - derecha</div>
+        <div class="bottomleft">Abajo - Izquierda</div>
+        <div class="bottomright">Abajo - Derecha</div>
+    </div>
+</body>
+</html>
