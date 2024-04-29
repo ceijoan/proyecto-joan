@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formularios</title>
+</head>
+<body>
+    <h1>Formularios</h1>
+    <!-- 
+        Atributos:
+        "action"   : A quien le enviare la información
+        "method"   : Tipo de request 
+                GET  : Siempre que se envie los datos por URL es esta. y tiene un limite de 2048 caracteres.
+                POST : Cuando no quiero que se vea al publico, atravez del body y ademas soporta hasta 32mb.
+
+        "inputs"   : tipos de cajas las mas comunes son: 
+                HTML4:   Submit, reset, text, password, file, image, hidden
+                HTML5:   buttom, number, tel, url, email, date, time, color, range
+                HTML5.1: month, week, datetime-local(fecha con hora).
+        "Name"     : identificador unico tipo variable.
+        "Value"    : Valor iniciar que se encuentra en el campo de texto.
+        "required" : Es un campo requerido y obligatorio.
+        "Placeholder" : Elemento que se muestra dentro de la caja pero NO es seleccionable.
+        "maxlength" : Cantidad máxima de caracteres.
+        "minlength" : Cantidad mínima de caracteres.
+        "autofocus" : Selecciona el imput elegido (Primordial que el usuario tenga seleccionado el primero)
+        Dentro del Form se puede utilizar cualquier elemento que se desee.
+        Button e inputtype:submmit = Sirven para lo mismo la diferencias es que el buttom deja agregar codigo internamente.
+        input:type="reset": Limpia todos los campos
+        input:type=""
+        "disable"  : No deja utilizar el input
+
+    -->
+    <form action="https://ecampus.rocks/test-forms.php" method="GET" style="display: flex; flex-wrap: wrap;">
+        <input type="text" name="user" value="Estefy" id="">
+        <input type="password" name="password" value="1234" id="" required>
+
+        <input type="text" name="Apellido" placeholder="Ingrese su Apellido" value="">
+        <input type="number" name="NIE" autofocus maxlength="10" value="5784574" min="5" max="40" step="any">
+        <input type="date" name="fecha">
+        <input type="time" name="hora">
+        <input type="radio" name="igual-para-seleccion" value="opcion1">opcion 1<!--El name en los radio buton debe ser el mismo para que se entienda que hacen parte del mismo grupo de conjunto-->
+        <input type="radio" name="igual-para-seleccion" value="opcion2">opcion 2
+        <input type="radio" name="igual-para-seleccion" value="opcion3">opcion 3
+        
+        
+        <button type="submit" name="">
+        
+            <img src="" alt="">
+            Enviar
+        </button>
+
+
+        <h3>Botones especiales</h3>
+        <button type="button" onclick="saludar()"> Este no envia</button>
+        <input type="button" value="Este no envia" onclick="despedir()"> 
+
+        <button type="reset">Limpiar registros</button>
+    
+    
+    
+    
+    
+    
+    
+    <script>
+        function saludar(){
+            alert("Hola a todos");
+        }
+        function despedir(){
+            alert("Chauuuuuu");
+        }
+    </script>
+</body>
+</html>
