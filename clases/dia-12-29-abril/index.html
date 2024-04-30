@@ -4,6 +4,26 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Formularios</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body{
+            display: flex;
+            flex-direction: column;
+            padding: 10px;
+        }
+        form{
+            display: flex;
+            flex-direction: column;
+            width: 100%;
+        }
+        form input, form button, select, textarea{
+            width: 100%;
+        }
+    </style>
 </head>
 <body>
     <h1>Formularios</h1>
@@ -32,21 +52,70 @@
         "disable"  : No deja utilizar el input
 
     -->
-    <form action="https://ecampus.rocks/test-forms.php" method="GET" style="display: flex; flex-wrap: wrap;">
-        <input type="text" name="user" value="Estefy" id="">
-        <input type="password" name="password" value="1234" id="" required>
+    <fieldset>
+        <form action="">
+            <label>Texto de prueba field set</label>
+            <input type="text">
+            <button>Enviar</button>
+        </form>
+    </fieldset>
+    <form action="https://ecampus.rocks/test-forms.php" method="GET">
+        <input type="text" name="user" value="Estefy" id="" enctype="MultiPart/form-data">
+        <input type="password" name="password" value="1234" id="" required><br>
 
-        <input type="text" name="Apellido" placeholder="Ingrese su Apellido" value="">
-        <input type="number" name="NIE" autofocus maxlength="10" value="5784574" min="5" max="40" step="any">
-        <input type="date" name="fecha">
-        <input type="time" name="hora">
-        <input type="radio" name="igual-para-seleccion" value="opcion1">opcion 1<!--El name en los radio buton debe ser el mismo para que se entienda que hacen parte del mismo grupo de conjunto-->
+        <input type="text" name="Apellido" placeholder="Ingrese su Apellido" value=""><br>
+        <input type="number" name="NIE" autofocus maxlength="10" value="5784574" min="5" max="40" step="any"><br>
+        <input type="date" name="fecha"><br>
+        <input type="time" name="hora"><br>
+        <label>
+            <input type="radio" name="igual-para-seleccion" value="opcion1">opcion 1<!--El name en los radio buton debe ser el mismo para que se entienda que hacen parte del mismo grupo de conjunto-->
+        </label>
+       
         <input type="radio" name="igual-para-seleccion" value="opcion2">opcion 2
-        <input type="radio" name="igual-para-seleccion" value="opcion3">opcion 3
+        <input type="radio" name="igual-para-seleccion" value="opcion3" checked>opcion 3 <!--Cheked= opcion para seleccionar solo un elemento -->
         
+        <input type="color" name="color" value="#f0f0f0">
+        <input type="range" min="1" max="10" step="1" list="markers">
+        <datalist id="markers"><!--Este aun no funciona bien en navegadores pero se puede hacer input range: DATALIST -->
+            <option value="0"></option>
+            <option value="25"></option>
+            <option value="50"></option>
+            <option value="75"></option>
+            <option value="100"></option>
+          </datalist>
+
+
+          <input type="hidden" name="numPaciente" value="5">
+          <textarea name="texto" id="" cols="100" rows="10" placeholder="loremn ipusm dolo asd asdf asdf"></textarea>
+          <br>
+          <select name="selector[]" id="" size="3" multiple><!--Opcion "size" muestra varias opciones -  Opción "multiple": deja seleccionar varias opciones-->
+            <optgroup label="Paises 1">
+                <option value="" selected>Seleccione una opción</option>
+                <option value="opcion1 ">opción 1</option>
+                <option value="opcion2" >opción 2</option>
+                <option value="opcion3">opción 3</option>
+            </optgroup>
+            <optgroup label="Paises 2">
+                <option value="" selected>Seleccione una opción</option>
+                <option value="opcion4 ">opción 1</option>
+                <option value="opcion5" >opción 2</option>
+                <option value="opcion6">opción 3</option>
+            </optgroup>             
+
+            <input name="check-valor" type="checkbox" value="Valor 1">Valor 1
+            <input name="check-valor" type="checkbox" value="Valor 2">Valor 3
+            <input name="check-valor" type="checkbox" value="Valor 3">Valor 2
+          </select>
+        <br><br>
         
+        <input type="text">
+            <label for="nombre_usuaio">Nombre de usuario
+                <input type="text">
+            </label>
+
+        <input type="file" name="foto" accept="image/*"><!--Si o si el formulario debe incluir la opción MultiPart: data-->
         <button type="submit" name="">
-        
+            <br><br><br><br>
             <img src="" alt="">
             Enviar
         </button>
