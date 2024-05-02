@@ -15,14 +15,43 @@
             font-family: Arial, Helvetica, sans-serif;
             font-size: 16px;
             color: #000;
+            display:flex;
+            flex-direction: column;
+        }
+        h1{
+            text-align: center;
+            margin: 20px 0;
+        }
+        h2{
+            text-align: left;
+            margin: 10px 0;
+        }
+        .container{
+            width: 800px;
+            margin: 10px auto;
+            padding: 10px 20px 20px;
+            border: 2px solid #000;
         }
         form{
             display: flex;
             flex-direction: column;
             flex: 1 0;
             gap: 20px;
-            border: 2px solid #000;
+            
         }
+        input[type=text], input[type=email], input[type=password], input[type=date], select, textarea, input[type=number]{
+            width: 100%;
+            padding: 12px 20px;
+            margin: 8px 0;
+            display: inline-block;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            box-sizing: border-box;
+        }
+        input[type=checkbox]{
+            
+        }
+        
     </style>
 </head>
 <body>
@@ -55,7 +84,7 @@
                 Fecha de nacimiento
                 <input type="date" name="fecha-nacimiento">
             </label>
-            <input name="tyc" type="checkbox" value="acepto-terminos-y-condiciones" required>Acepto<a href="">Terminos y condiciones</a>
+            <input name="tyc" type="checkbox" value="acepto-terminos-y-condiciones" required><p>Acepto<a href=""> Terminos y condiciones</a></p>
 
             <button type="submit" name="">Enviar</button>
         </form>
@@ -169,7 +198,105 @@
                 <i class="fa-regular fa-credit-card"></i><input type="radio" name="metodo-pago" value="t-credito"> Tarjeta debito
             </div>
             
-            <button type="submit" name="">Contactar</button>
+            <button type="submit" name="">Comprar</button>
+        </form>
+    </div>
+
+    <div class="container">
+        <h2>Formulario de reserva de Hotel</h2>
+        <form action="https://ecampus.rocks/test-forms.php" method="GET">
+            <label>
+                Nombre
+                <input type="text" name="Nombre" placeholder="Nombre">
+            </label>
+            <label>
+                Correo electrónico
+                <input type="email" name="email" placeholder="email" required>
+            </label>
+            <label>
+                Teléfono
+                <input type="number" maxlength="10">
+            </label>
+            <label>
+                Fecha de llegada
+                <input type="date" name="fecha-llegada" required>
+            </label>
+            <label>
+                Fecha de Salida
+                <input type="date" name="fecha-salida"required>
+            </label>
+            <div class="tipos-habitacion">
+                <h3>Tipos de habitacion</h3>
+                <ul>
+                    <li>
+                        <input name="habitaciones" type="radio" value="Habitacion 1">
+                        <i class="fa-solid fa-bed"></i>
+                        <div class="cantidad">
+                            Cantidad de huespedes
+                            <input type="number" max="100" min="1" step="1">
+                        </div>
+                        <div class="cantidad">
+                            Adicionales
+                            <textarea name="Adicionales" name="adicionales" id="" placeholder="Describir información adicional que desea agregar en su orden"></textarea>
+                        </div>
+                    </li>    
+                    <li>
+                        <input name="habitaciones" type="radio" value="Habitacion 2">
+                        <i class="fa-solid fa-bed"></i><i class="fa-solid fa-bed"></i>
+                        <div class="cantidad">
+                            Cantidad de huespedes
+                            <input type="number" max="100" min="1" step="1">
+                        </div>
+                        <div class="cantidad">
+                            Adicionales
+                            <textarea name="Adicionales" name="adicionales" id="" placeholder="Describir información adicional que desea agregar en su orden"></textarea>
+                        </div>
+                    </li>
+                    <li>
+                        <input name="habitaciones" type="radio" value="Habitacion 1">
+                        <i class="fa-solid fa-bed"></i><i class="fa-solid fa-bed"></i><i class="fa-solid fa-bed"></i>
+                        <div class="cantidad">
+                            Cantidad de huespedes
+                            <input type="number" max="100" min="1" step="1">
+                        </div>
+                        <div class="cantidad">
+                            Adicionales
+                            <textarea name="Adicionales" name="adicionales" id="" placeholder="Describir información adicional que desea agregar en su orden"></textarea>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+            <button type="submit" name="">Reservar</button>
+        </form>
+    </div>
+
+    <div class="container">
+        <h2>Comentarios de Producto</h2>
+        <form action="https://ecampus.rocks/test-forms.php" method="GET">
+            <label>
+                Nombre
+                <input type="text" name="Nombre" placeholder="Nombre de usuario">
+            </label>
+            <label>
+                Correo electrónico
+                <input type="email" name="email" placeholder="email" required>
+            </label>
+            <label>
+                Calificación
+                <div class="rating">
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                </div>
+            </label>
+            <label>
+                Comentario
+                <textarea name="Adicionales" name="adicionales" id="" placeholder="Describir información adicional que desea agregar en su orden"></textarea>
+            </label>
+
+            <button type="submit" name="">Dejar comentario</button>
         </form>
     </div>
 </body>
