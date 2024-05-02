@@ -48,9 +48,40 @@
             border-radius: 4px;
             box-sizing: border-box;
         }
-        input[type=checkbox]{
-            
-        }
+    .numero{
+        width: 50px;
+    }
+    input[type=checkbox] {
+        position: relative;
+	    cursor: pointer;
+        margin-left: 20px;
+    }
+    input[type=checkbox]:before {
+         content: "";
+         display: block;
+         position: absolute;
+         width: 16px;
+         height: 16px;
+         top: 0;
+         left: -20px;
+         border: 2px solid #555555;
+         border-radius: 3px;
+         background-color: white;
+}
+    input[type=checkbox]:checked:after {
+         content: "";
+         display: block;
+         width: 5px;
+         height: 10px;
+         border: solid black;
+         border-width: 0 2px 2px 0;
+         -webkit-transform: rotate(45deg);
+         -ms-transform: rotate(45deg);
+         transform: rotate(45deg);
+         position: absolute;
+         top: 2px;
+         left: 6px;
+}
         
     </style>
 </head>
@@ -84,7 +115,7 @@
                 Fecha de nacimiento
                 <input type="date" name="fecha-nacimiento">
             </label>
-            <input name="tyc" type="checkbox" value="acepto-terminos-y-condiciones" required><p>Acepto<a href=""> Terminos y condiciones</a></p>
+            <p><input name="tyc" type="checkbox" value="acepto-terminos-y-condiciones" required>Acepto<a href=""> Terminos y condiciones</a></p>
 
             <button type="submit" name="">Enviar</button>
         </form>
@@ -123,7 +154,7 @@
             </label>
             <label>
                 Código Postal
-                <input type="number" name="cod-postal" placeholder=" " required>
+                <input class="numero" type="number" name="cod-postal" placeholder=" " required>
             </label>
             <label>
                 País
@@ -136,7 +167,7 @@
             </label>
             <label>
                 Ciudad
-                <select name="ciudad" id="">
+                <select class="numero" name="ciudad" id="">
                     <option value="" selected>Seleccione ciudad</option>
                     <optgroup label="España">
                         <option value="opcion1">Valencia</option>
