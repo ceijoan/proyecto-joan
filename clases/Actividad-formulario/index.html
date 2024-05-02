@@ -17,6 +17,8 @@
             color: #000;
             display:flex;
             flex-direction: column;
+            gap: 20px;
+            margin: 20px;
         }
         h1{
             text-align: center;
@@ -27,7 +29,7 @@
             margin: 10px 0;
         }
         .container{
-            width: 800px;
+            width: 100%;
             margin: 10px auto;
             padding: 10px 20px 20px;
             border: 2px solid #000;
@@ -91,15 +93,20 @@
             display: flex;
             flex-direction: row;
             list-style: none;
+            flex-wrap: wrap;
+            justify-content: center;
         }
         .lista-products ul li{
             text-align: center;
-            border: 1px solid gray;
+            border-radius: 10px;
             box-shadow: 5px 3px 10px #000;
             margin: 20px;
+            width: 28%;
+
         }
         .lista-products ul li img{
             width: 100%;
+            border-radius: 10px 10px 0 0;
         }
     </style>
 </head>
@@ -213,29 +220,44 @@
                     <li>
                         <img src="https://picsum.photos/80/80" alt="producto1">
                         <p>Descripcion del producto que puede tener un texto como este o mas largo</p>
-                        <input name="productos" type="checkbox" value="producto1">Producto 1
-                        <div class="cantidad">
+                        <br>
+                        <label>
+                            Producto 1
+                            <input name="productos" type="checkbox" value="producto1">
+                        </label>    
+                        <br>
+                        <label class="cantidad">
                             Cantidad
-                            <input name="cantidad" class="numero" type="number" max="100" min="1" step="1">
-                        </div>
+                            <input name="cantidad1" class="numero" type="number" max="100" min="1" step="1">
+                        </label>
                     </li>    
                     <li>
                         <img src="https://picsum.photos/80/80" alt="producto1">
                         <p>Descripcion del producto que puede tener un texto como este o mas largo</p>
-                        <input name="productos" type="checkbox" value="producto2">Producto 2
-                        <div class="cantidad">
+                        <br>
+                        <label>
+                            Producto 2
+                            <input name="productos" type="checkbox" value="producto2">
+                        </label>    
+                        <br>
+                        <label class="cantidad2">
                             Cantidad
                             <input name="cantidad" class="numero" type="number" max="100" min="1" step="1">
-                        </div>
+                        </label>
                     </li>
                     <li>
                         <img src="https://picsum.photos/80/80" alt="producto1">
                         <p>Descripcion del producto que puede tener un texto como este o mas largo</p>
-                        <input name="productos" type="checkbox" value="producto3">Producto 3
-                        <div class="cantidad">
+                        <br>
+                        <label>
+                            Producto 2
+                            <input name="productos" type="checkbox" value="producto3">
+                        </label>    
+                        <br>
+                        <label class="cantidad3">
                             Cantidad
                             <input name="cantidad" class="numero" type="number" max="100" min="1" step="1">
-                        </div>
+                        </label>
                     </li>
                 </ul>
             </div>
@@ -243,11 +265,12 @@
                 Teléfono
                 <input type="number" maxlength="10">
             </label>
-            <div class="metodo-pago">
+            <label class="metodo-pago">
+                Metodos de Pago
                 <i class="fa-solid fa-credit-card"></i> <input type="radio" name="metodo-pago" value="t-credito"> Tarjeta de credito
                 <i class="fa-solid fa-money-bill"></i><input type="radio" name="metodo-pago" value="efectivo"> Efectivo
                 <i class="fa-regular fa-credit-card"></i><input type="radio" name="metodo-pago" value="t-debito"> Tarjeta debito
-            </div>
+            </label>
             
             <button type="submit" name="">Comprar</button>
         </form>
@@ -294,26 +317,26 @@
                     <li>
                         <input name="habitaciones" type="radio" value="Habitacion 2">
                         <i class="fa-solid fa-bed"></i><i class="fa-solid fa-bed"></i>
-                        <div class="cantidad">
+                        <label class="cantidad">
                             Cantidad de huespedes
                             <input class="numero" type="number" max="100" min="1" step="1">
-                        </div>
-                        <div class="cantidad">
+                        </label>
+                        <label class="cantidad">
                             Adicionales
                             <textarea name="Adicionales" name="adicionales" id="" placeholder="Describir información adicional que desea agregar en su orden"></textarea>
-                        </div>
+                        </label>
                     </li>
                     <li>
                         <input name="habitaciones" type="radio" value="Habitacion 1">
                         <i class="fa-solid fa-bed"></i><i class="fa-solid fa-bed"></i><i class="fa-solid fa-bed"></i>
-                        <div class="cantidad">
+                        <label class="cantidad">
                             Cantidad de huespedes
                             <input class="numero" type="number" max="100" min="1" step="1">
-                        </div>
-                        <div class="cantidad">
+                        </label>
+                        <label class="cantidad">
                             Adicionales
                             <textarea name="Adicionales" name="adicionales" id="" placeholder="Describir información adicional que desea agregar en su orden"></textarea>
-                        </div>
+                        </label>
                     </li>
                 </ul>
             </div>
@@ -335,11 +358,11 @@
             <label>
                 Calificación
                 <div class="rating">
-                    <i class="fa-solid fa-star"></i>
-                    <i class="fa-solid fa-star"></i>
-                    <i class="fa-solid fa-star"></i>
-                    <i class="fa-solid fa-star"></i>
-                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i><input type="radio" name="star" value="1">
+                    <i class="fa-solid fa-star"></i><input type="radio" name="star" value="2">
+                    <i class="fa-solid fa-star"></i><input type="radio" name="star" value="3">
+                    <i class="fa-solid fa-star"></i><input type="radio" name="star" value="4">
+                    <i class="fa-solid fa-star"></i><input type="radio" name="star" value="5">
                 </div>
             </label>
             <label>
