@@ -48,41 +48,59 @@
             border-radius: 4px;
             box-sizing: border-box;
         }
-    .numero{
-        width: 50px;
-    }
-    input[type=checkbox] {
-        position: relative;
-	    cursor: pointer;
-        margin-left: 20px;
-    }
-    input[type=checkbox]:before {
-         content: "";
-         display: block;
-         position: absolute;
-         width: 16px;
-         height: 16px;
-         top: 0;
-         left: -20px;
-         border: 2px solid #555555;
-         border-radius: 3px;
-         background-color: white;
-}
-    input[type=checkbox]:checked:after {
-         content: "";
-         display: block;
-         width: 5px;
-         height: 10px;
-         border: solid black;
-         border-width: 0 2px 2px 0;
-         -webkit-transform: rotate(45deg);
-         -ms-transform: rotate(45deg);
-         transform: rotate(45deg);
-         position: absolute;
-         top: 2px;
-         left: 6px;
-}
-        
+        input.numero{
+            width: 75px!important;
+        }
+        input[type=checkbox] {
+            position: relative;
+            cursor: pointer;
+            margin-left: 20px;
+            width: 0;
+            
+        }
+        input[type=checkbox]:before{
+            content: "";
+            display: block;
+            position: absolute;
+            width: 16px;
+            height: 16px;
+            top: -3px;
+            left: -20px;
+            border: 2px solid #555555;
+            border-radius: 3px;
+            background-color: white;
+        }
+        input[type=checkbox]:checked:after {
+            content: "";
+            display: block;
+            width: 5px;
+            height: 10px;
+            border: solid black;
+            border-width: 0 2px 2px 0;
+            -webkit-transform: rotate(45deg);
+            -ms-transform: rotate(45deg);
+            transform: rotate(45deg);
+            position: absolute;
+            top: 0;
+            left: -14px;
+        }
+        .lista-products{
+            padding: 10px;
+        }
+        .lista-products ul{
+            display: flex;
+            flex-direction: row;
+            list-style: none;
+        }
+        .lista-products ul li{
+            text-align: center;
+            border: 1px solid gray;
+            box-shadow: 5px 3px 10px #000;
+            margin: 20px;
+        }
+        .lista-products ul li img{
+            width: 100%;
+        }
     </style>
 </head>
 <body>
@@ -115,7 +133,9 @@
                 Fecha de nacimiento
                 <input type="date" name="fecha-nacimiento">
             </label>
-            <p><input name="tyc" type="checkbox" value="acepto-terminos-y-condiciones" required>Acepto<a href=""> Terminos y condiciones</a></p>
+            <label>
+            <input name="tyc" type="checkbox" value="acepto-terminos-y-condiciones" required>
+            Acepto<a href=""> Terminos y condiciones</a></label>
 
             <button type="submit" name="">Enviar</button>
         </form>
@@ -154,7 +174,7 @@
             </label>
             <label>
                 Código Postal
-                <input class="numero" type="number" name="cod-postal" placeholder=" " required>
+                <input type="number" name="cod-postal" placeholder=" " required>
             </label>
             <label>
                 País
@@ -167,7 +187,7 @@
             </label>
             <label>
                 Ciudad
-                <select class="numero" name="ciudad" id="">
+                <select name="ciudad" id="">
                     <option value="" selected>Seleccione ciudad</option>
                     <optgroup label="España">
                         <option value="opcion1">Valencia</option>
@@ -196,7 +216,7 @@
                         <input name="productos" type="checkbox" value="producto1">Producto 1
                         <div class="cantidad">
                             Cantidad
-                            <input type="number" max="100" min="1" step="1">
+                            <input name="cantidad" class="numero" type="number" max="100" min="1" step="1">
                         </div>
                     </li>    
                     <li>
@@ -205,7 +225,7 @@
                         <input name="productos" type="checkbox" value="producto2">Producto 2
                         <div class="cantidad">
                             Cantidad
-                            <input type="number" max="100" min="1" step="1">
+                            <input name="cantidad" class="numero" type="number" max="100" min="1" step="1">
                         </div>
                     </li>
                     <li>
@@ -214,7 +234,7 @@
                         <input name="productos" type="checkbox" value="producto3">Producto 3
                         <div class="cantidad">
                             Cantidad
-                            <input type="number" max="100" min="1" step="1">
+                            <input name="cantidad" class="numero" type="number" max="100" min="1" step="1">
                         </div>
                     </li>
                 </ul>
@@ -225,8 +245,8 @@
             </label>
             <div class="metodo-pago">
                 <i class="fa-solid fa-credit-card"></i> <input type="radio" name="metodo-pago" value="t-credito"> Tarjeta de credito
-                <i class="fa-solid fa-money-bill"></i><input type="radio" name="metodo-pago" value="t-credito"> Efectivo
-                <i class="fa-regular fa-credit-card"></i><input type="radio" name="metodo-pago" value="t-credito"> Tarjeta debito
+                <i class="fa-solid fa-money-bill"></i><input type="radio" name="metodo-pago" value="efectivo"> Efectivo
+                <i class="fa-regular fa-credit-card"></i><input type="radio" name="metodo-pago" value="t-debito"> Tarjeta debito
             </div>
             
             <button type="submit" name="">Comprar</button>
@@ -264,7 +284,7 @@
                         <i class="fa-solid fa-bed"></i>
                         <div class="cantidad">
                             Cantidad de huespedes
-                            <input type="number" max="100" min="1" step="1">
+                            <input class="numero" type="number" max="100" min="1" step="1">
                         </div>
                         <div class="cantidad">
                             Adicionales
@@ -276,7 +296,7 @@
                         <i class="fa-solid fa-bed"></i><i class="fa-solid fa-bed"></i>
                         <div class="cantidad">
                             Cantidad de huespedes
-                            <input type="number" max="100" min="1" step="1">
+                            <input class="numero" type="number" max="100" min="1" step="1">
                         </div>
                         <div class="cantidad">
                             Adicionales
@@ -288,7 +308,7 @@
                         <i class="fa-solid fa-bed"></i><i class="fa-solid fa-bed"></i><i class="fa-solid fa-bed"></i>
                         <div class="cantidad">
                             Cantidad de huespedes
-                            <input type="number" max="100" min="1" step="1">
+                            <input class="numero" type="number" max="100" min="1" step="1">
                         </div>
                         <div class="cantidad">
                             Adicionales

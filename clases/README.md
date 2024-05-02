@@ -18,3 +18,12 @@ https://necolas.github.io/normalize.css/
 
 El reset de estilos debe hacer mas trabajo ya que se le deben poner todos los estilos.
 
+
+
+
+Extensiones de Visual:
+Live Server
+Material icon Theme
+Thunder Client
+w3c web Validator
+
