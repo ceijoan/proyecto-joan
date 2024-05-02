@@ -141,8 +141,8 @@
                 <input type="date" name="fecha-nacimiento">
             </label>
             <label>
-            <input name="tyc" type="checkbox" value="acepto-terminos-y-condiciones" required>
-            Acepto<a href=""> Terminos y condiciones</a></label>
+                <input name="tyc" type="checkbox" value="acepto-terminos-y-condiciones" required>Acepto<a href=""> Terminos y condiciones</a>
+            </label>
 
             <button type="submit" name="">Enviar</button>
         </form>
@@ -218,26 +218,26 @@
                 <h3>Lista de productos</h3>
                 <ul>
                     <li>
-                        <img src="https://picsum.photos/80/80" alt="producto1">
-                        <p>Descripcion del producto que puede tener un texto como este o mas largo</p>
-                        <br>
                         <label>
+                            <img src="https://picsum.photos/80/80" alt="producto1">
+                            <p>Descripcion del producto que puede tener un texto como este o mas largo</p>
+                            <br>
                             Producto 1
                             <input name="productos" type="checkbox" value="producto1">
                         </label>    
                         <br>
                         <label class="cantidad">
                             Cantidad
-                            <input name="cantidad1" class="numero" type="number" max="100" min="1" step="1">
+                        <input name="cantidad1" class="numero" type="number" max="100" min="1" step="1">
                         </label>
                     </li>    
                     <li>
-                        <img src="https://picsum.photos/80/80" alt="producto1">
-                        <p>Descripcion del producto que puede tener un texto como este o mas largo</p>
-                        <br>
                         <label>
-                            Producto 2
-                            <input name="productos" type="checkbox" value="producto2">
+                            <img src="https://picsum.photos/80/80" alt="producto1">
+                            <p>Descripcion del producto que puede tener un texto como este o mas largo</p>
+                            <br>
+                                Producto 2
+                        <input name="productos" type="checkbox" value="producto2">
                         </label>    
                         <br>
                         <label class="cantidad2">
@@ -246,11 +246,11 @@
                         </label>
                     </li>
                     <li>
-                        <img src="https://picsum.photos/80/80" alt="producto1">
-                        <p>Descripcion del producto que puede tener un texto como este o mas largo</p>
-                        <br>
                         <label>
-                            Producto 2
+                            <img src="https://picsum.photos/80/80" alt="producto1">
+                            <p>Descripcion del producto que puede tener un texto como este o mas largo</p>
+                            <br>
+                                Producto 3
                             <input name="productos" type="checkbox" value="producto3">
                         </label>    
                         <br>
@@ -267,9 +267,19 @@
             </label>
             <label class="metodo-pago">
                 Metodos de Pago
-                <i class="fa-solid fa-credit-card"></i> <input type="radio" name="metodo-pago" value="t-credito"> Tarjeta de credito
-                <i class="fa-solid fa-money-bill"></i><input type="radio" name="metodo-pago" value="efectivo"> Efectivo
-                <i class="fa-regular fa-credit-card"></i><input type="radio" name="metodo-pago" value="t-debito"> Tarjeta debito
+                <br>
+                <label>
+                    Tarjeta de credito
+                    <i class="fa-solid fa-credit-card"></i> <input type="radio" name="metodo-pago" value="t-credito"> 
+                </label>
+                <label>
+                    Efectivo
+                    <i class="fa-solid fa-money-bill"></i><input type="radio" name="metodo-pago" value="efectivo"> 
+                </label>
+                <label>
+                    Tarjeta debito
+                    <i class="fa-regular fa-credit-card"></i><input type="radio" name="metodo-pago" value="t-debito"> 
+                </label>
             </label>
             
             <button type="submit" name="">Comprar</button>
@@ -303,36 +313,51 @@
                 <h3>Tipos de habitacion</h3>
                 <ul>
                     <li>
-                        <input name="habitaciones" type="radio" value="Habitacion 1">
-                        <i class="fa-solid fa-bed"></i>
-                        <div class="cantidad">
-                            Cantidad de huespedes
-                            <input class="numero" type="number" max="100" min="1" step="1">
-                        </div>
-                        <div class="cantidad">
-                            Adicionales
-                            <textarea name="Adicionales" name="adicionales" id="" placeholder="Describir información adicional que desea agregar en su orden"></textarea>
-                        </div>
-                    </li>    
-                    <li>
-                        <input name="habitaciones" type="radio" value="Habitacion 2">
-                        <i class="fa-solid fa-bed"></i><i class="fa-solid fa-bed"></i>
+                        <label>
+                            Habitación tipo 1
+                            <input name="habitaciones" type="radio" value="Habitacion 1">
+                            <i class="fa-solid fa-bed"></i>
+                        </label>
+                        <br>
                         <label class="cantidad">
                             Cantidad de huespedes
                             <input class="numero" type="number" max="100" min="1" step="1">
                         </label>
+                        <br>
+                        <label class="cantidad">
+                            Adicionales
+                            <textarea name="Adicionales" name="adicionales" id="" placeholder="Describir información adicional que desea agregar en su orden"></textarea>
+                        </label>
+                    </li>    
+                    <li>
+                        <label>
+                            Habitación tipo 2
+                            <input name="habitaciones" type="radio" value="Habitacion 2">
+                            <i class="fa-solid fa-bed"></i><i class="fa-solid fa-bed"></i>
+                        </label>
+                        <br>
+                        <label class="cantidad">
+                            Cantidad de huespedes
+                            <input class="numero" type="number" max="100" min="1" step="1">
+                        </label>
+                        <br>
                         <label class="cantidad">
                             Adicionales
                             <textarea name="Adicionales" name="adicionales" id="" placeholder="Describir información adicional que desea agregar en su orden"></textarea>
                         </label>
                     </li>
                     <li>
-                        <input name="habitaciones" type="radio" value="Habitacion 1">
-                        <i class="fa-solid fa-bed"></i><i class="fa-solid fa-bed"></i><i class="fa-solid fa-bed"></i>
+                        <label>
+                            Habitación tipo 3
+                            <input name="habitaciones" type="radio" value="Habitacion 1">
+                            <i class="fa-solid fa-bed"></i><i class="fa-solid fa-bed"></i><i class="fa-solid fa-bed"></i>
+                        </label>
+                        <br>
                         <label class="cantidad">
                             Cantidad de huespedes
                             <input class="numero" type="number" max="100" min="1" step="1">
                         </label>
+                        <br>
                         <label class="cantidad">
                             Adicionales
                             <textarea name="Adicionales" name="adicionales" id="" placeholder="Describir información adicional que desea agregar en su orden"></textarea>
