@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./css/style.css">
+</head>
+<body>
+    <header>
+        <nav class="navbar">
+            <img class="logo" src="https://picsum.photos/id/64/150/50" alt="">
+            <section>
+                <ul class="menu">
+                    <li><a href="#">opcion 1</a></li>
+                    <li><a href="#">opcion 2</a></li>
+                    <li><a href="#">opcion 3</a></li>
+                    <li><a href="#">opcion 4</a></li>
+                    <li><a href="#">opcion 5</a></li>
+                </ul>
+            </section>  
+        </nav>
+    </header>
+    <aside>
+        <h4>Banner publicidad</h4>
+        <img src="https://picsum.photos/id/64/1024/80" alt="">
+    </aside>
+    <main>
+        <section>
+            <Article class="container">
+                <h2>Formulario de Pedido de producto</h2>
+                <form action="https://ecampus.rocks/test-forms.php" method="GET">
+                    <label>
+                        Nombre Completo
+                        <input type="text" name="Nombre-completo" placeholder="Nombre de usuario completo">
+                    </label>
+                    <label>
+                        Dirección de envio
+                        <input type="text" name="direccion" placeholder="" >
+                    </label>
+                    <label>
+                        Código Postal
+                        <input type="number" name="cod-postal" placeholder=" " required>
+                    </label>
+                    <label>
+                        País
+                        <select name="pais" id="">
+                            <option value="" selected>Seleccione un país</option>
+                            <option value="opcion1">España</option>
+                            <option value="opcion2">Portugal</option>
+                            <option value="opcion3">Francia</option>
+                        </select>
+                    </label>
+                    <label>
+                        Ciudad
+                        <select name="ciudad" id="">
+                            <option value="" selected>Seleccione ciudad</option>
+                            <optgroup label="España">
+                                <option value="opcion1">Valencia</option>
+                                <option value="opcion2">Barcelona</option>
+                                <option value="opcion3">Madrid</option>
+                            </optgroup>
+                            <optgroup label="Portugal">
+                                <option value="opcion1">Lisboa</option>
+                                <option value="opcion2">Oporto</option>
+                                <option value="opcion3">Évora</option>
+                            </optgroup>
+                            <optgroup label="Francia">
+                                <option value="opcion1">Paris</option>
+                                <option value="opcion2">Marsella</option>
+                                <option value="opcion3">Lyon</option>
+                            </optgroup>
+                            
+                        </select>
+                    </label>
+                    <div class="lista-products">
+                        <h3>Lista de productos</h3>
+                        <ul>
+                            <li>
+                                <label>
+                                    <img src="https://picsum.photos/80/80" alt="producto1">
+                                    <p>Descripcion del producto que puede tener un texto como este o mas largo</p>
+                                    <br>
+                                    Producto 1
+                                    <input name="productos" type="checkbox" value="producto1">
+                                </label>    
+                                <br>
+                                <label class="cantidad">
+                                    Cantidad
+                                <input name="cantidad1" class="numero" type="number" max="100" min="1" step="1">
+                                </label>
+                            </li>    
+                            <li>
+                                <label>
+                                    <img src="https://picsum.photos/80/80" alt="producto1">
+                                    <p>Descripcion del producto que puede tener un texto como este o mas largo</p>
+                                    <br>
+                                        Producto 2
+                                <input name="productos" type="checkbox" value="producto2">
+                                </label>    
+                                <br>
+                                <label class="cantidad2">
+                                    Cantidad
+                                    <input name="cantidad" class="numero" type="number" max="100" min="1" step="1">
+                                </label>
+                            </li>
+                            <li>
+                                <label>
+                                    <img src="https://picsum.photos/80/80" alt="producto1">
+                                    <p>Descripcion del producto que puede tener un texto como este o mas largo</p>
+                                    <br>
+                                        Producto 3
+                                    <input name="productos" type="checkbox" value="producto3">
+                                </label>    
+                                <br>
+                                <label class="cantidad3">
+                                    Cantidad
+                                    <input name="cantidad" class="numero" type="number" max="100" min="1" step="1">
+                                </label>
+                            </li>
+                        </ul>
+                    </div>
+                    <label>
+                        Teléfono
+                        <input type="number" maxlength="10">
+                    </label>
+                    <label class="metodo-pago">
+                        Metodos de Pago
+                        <br>
+                        <label>
+                            Tarjeta de credito
+                            <i class="fa-solid fa-credit-card"></i> <input type="radio" name="metodo-pago" value="t-credito"> 
+                        </label>
+                        <label>
+                            Efectivo
+                            <i class="fa-solid fa-money-bill"></i><input type="radio" name="metodo-pago" value="efectivo"> 
+                        </label>
+                        <label>
+                            Tarjeta debito
+                            <i class="fa-regular fa-credit-card"></i><input type="radio" name="metodo-pago" value="t-debito"> 
+                        </label>
+                    </label>
+                    
+                    <button type="submit" name="">Comprar</button>
+                </form>
+            </Article>
+        </section>
+        <section>
+            <article>
+                <figure>
+                    <img src="https://picsum.photos/80/80" alt="">
+                    <figcaption>Imagen de articulo o noticia</figcaption>
+                    <h2>Titulo de una noticia</h2><p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Atque molestias fugit odio quo, earum facilis eaque aut blanditiis ea dolore repellat dolor quaerat, illum repellendus? Sit ex molestiae cumque reprehenderit. <a href="#">Leer más</a> </p>
+                </figure>
+            </article>
+            <article>
+                <figure>
+                    <img src="https://picsum.photos/80/80" alt="">
+                    <figcaption>Imagen de articulo o noticia</figcaption>
+                    <h2>Titulo de una noticia</h2><p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Atque molestias fugit odio quo, earum facilis eaque aut blanditiis ea dolore repellat dolor quaerat, illum repellendus? Sit ex molestiae cumque reprehenderit. <a href="#">Leer más</a> </p>
+                </figure>
+            </article>
+            <article>
+                <figure>
+                    <img src="https://picsum.photos/80/80" alt="">
+                    <figcaption>Imagen de articulo o noticia</figcaption>
+                    <h2>Titulo de una noticia</h2><p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Atque molestias fugit odio quo, earum facilis eaque aut blanditiis ea dolore repellat dolor quaerat, illum repellendus? Sit ex molestiae cumque reprehenderit. <a href="#">Leer más</a> </p>
+                </figure>
+            </article>
+            <article>
+                <figure>
+                    <img src="https://picsum.photos/80/80" alt="">
+                    <figcaption>Imagen de articulo o noticia</figcaption>
+                    <h2>Titulo de una noticia</h2><p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Atque molestias fugit odio quo, earum facilis eaque aut blanditiis ea dolore repellat dolor quaerat, illum repellendus? Sit ex molestiae cumque reprehenderit. <a href="#">Leer más</a> </p>
+                </figure>
+            </article>
+        </section>
+    </main>
+    <footer>
+
+    </footer>
+</body>
+</html>
