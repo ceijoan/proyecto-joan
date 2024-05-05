@@ -29,6 +29,10 @@ El reset de estilos debe hacer mas trabajo ya que se le deben poner todos los es
 
 # VSC Shortcuts interesantes
 
+Podemos ver la lista completa de shortcuts en la página de [Visual Studio Code](https://code.visualstudio.com/shortcuts/keyboard-shortcuts-windows.pdf)
+o para [MacOS](https://code.visualstudio.com/shortcuts/keyboard-shortcuts-macos.pdf)
+o haciendo `Ctrl + K` y luego `Ctrl + S`.
+
 - `Ctrl + Shift + P` : Buscar cualquier comando (Ver uso de > y @)
 - `Ctrl + P` : Buscar cualquier archivo en el proyecto
 - `Ctrl + P` : y luego `>` : Buscar cualquier comando
@@ -41,10 +45,6 @@ El reset de estilos debe hacer mas trabajo ya que se le deben poner todos los es
 - `Ctrl + Space` : Autocompletar (Tr
 - `Ctrl + Space` : Autocompletar (Trigger Suggestion)
 - `Ctrl + I` : Activar Github Copilot
-
-Podemos ver la lista completa de shortcuts en la página de [Visual Studio Code](https://code.visualstudio.com/shortcuts/keyboard-shortcuts-windows.pdf)
-o para [MacOS](https://code.visualstudio.com/shortcuts/keyboard-shortcuts-macos.pdf)
-o haciendo `Ctrl + K` y luego `Ctrl + S`.
 
 ## Selección de texto
 - `Ctrl + L` : Seleccionar la línea actual + la siguiente
