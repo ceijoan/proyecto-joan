@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nomenclaturas</title>
+    <style>
+        .header{
+
+        }
+        .h1{
+
+        }
+        .nav{
+
+        }
+        .parrafo{
+            
+        }
+    </style>
+</head>
+<body>
+    <header class="header">
+        <h1 class="H1">CEI</h1>
+        <nav class="navegacion">
+            <ul class="nav-lista">
+                <li class="li-nav">opcion1 </li>
+                <li class="li-nav">opcion2</li>
+                <li class="li-nav">opcion3</li>
+                <li class="li-nav">opcion4</li>
+                <li class="li-nav">opcion5</li>
+            </ul>
+        </nav>
+        <div class="especificidad">
+            <h3>Especificidad y como se calcula</h3>
+            <p class="parrarfo">Es la forma en la que los navegadores  deciden que regla css se aplica a un elemento. Mientras mas especifica sea una regla, mas peso tendra. pero tambien sera mas dificial de sobre escribir y mantener el código limpio</p>
+            <p class="parrafo">
+                Los valores de especificidad se calculan sumando 3 columnas (0,0,0) "asi se puede ver en Visual estudio"
+                <ul>
+                    <li>
+                        la primera columna, representa los ID's: por cada Id, sumamos un valor al contado ej:(3.0.0)
+                    </li>
+                    <li>
+                        La segunda columna, se cuenta con clases, atributos y pseudo clases. EJ: 2id 3Clases : :hover, :root, 
+                    </li>
+                    <li>
+                        la tercer columna, cuenta los elementos o tags  y pseudo elementos EJ ::before ::after 
+                    </li>
+                </ul>
+            </p>
+        </div>
+    </header>
+    <main class="contenido">
+        <section class="seccion-uno">
+            <h3 class="h3">
+                Nombres de variables y selectores
+            </h3>
+            
+            <ul>
+                <li>Uppercase: Fuente mayuscula ".MICLASE"</li>
+                <li>Lowercase: Fuente en minuscula ".miclase"</li>
+                <li>Pascalcase: Fuente con la primer letra de cada palabra en mayuscula ".MiClase"</li>
+                <li>camelcase: fuentes toda en minuscula exeptola de la siguiente palabras"miClase"</li>
+                <li>kebab-case: Fuente toda en minuscula con separaciones hechas por guiones al medio ".mi-clase"</li>
+                <li>sneak-case:Fuente toda en minuscula con separaciones hechas por guion al piso ".mi_clase"</li>
+            </ul>
+        </section>
+    </main>
+</body>
+</html>
