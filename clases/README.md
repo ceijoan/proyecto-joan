@@ -26,6 +26,7 @@ El reset de estilos debe hacer mas trabajo ya que se le deben poner todos los es
 - Material icon Theme
 - Thunder Client
 - w3c web Validator
+- live Preview
 
 # VSC Shortcuts interesantes
 
