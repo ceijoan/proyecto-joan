@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <title>Media Queries</title>
+    <style>
+        @media screen and (min-width:600px) {/*Con Screen modifica los elementos para cuando se va a imprimir la pantalla*/
+            .h1{
+                color: red;
+            }
+        }
+        @media print {/*Con PRINT modifica los elementos para cuando se va a imprimir la pagina*/
+            .h2{
+                display: none;
+            }
+        }
+
+
+        .h3{
+            color: blue;
+        }
+        @media (min-width:600px){
+            h3{
+                color: red;
+            }
+        }
+        /*Media para mobile*/
+        @media screen and (min-width:320px) and (max-width:768px){
+            .first-mobile{
+                background-color:chocolate;
+            }
+        }
+        /*Media para tablet*/
+        @media screen and (min-width:768px) and (max-width:1024px){
+            .first-tablet{
+                background-color: green;
+            }
+        }
+        /*Media para desktop*/
+        @media screen and (min-width:1024px){
+            .first-dektop{
+                background-color:blueviolet;
+            }
+        }
+    </style>
+</head>
+<body>
+    <H1 class="h1">MEDIA QUIERIES</H1>
+
+    <h2 class="h2">
+        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Impedit earum at deleniti quis provident saepe qui nesciunt fuga a ipsa dolores nam culpa error repudiandae nihil rerum iure, inventore est.
+    </h2>
+
+    <h3 class="h3">Utilizando Media queries</h3>
+    <ul>
+        <li>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Atque sunt voluptate eligendi? Aliquid quod quibusdam excepturi iure perspiciatis a ullam, ipsa, accusamus magni expedita, vero rerum consequuntur eos architecto error!</li>
+    </ul>
+
+    <ul>
+        <li class="first-mobile"><p>Reglas mobile first</p>- mobile (55%): 320px - 480px</li>
+        <li class="first-tablet"><p>Reglas tablet</p>- tablets (2%): 768px - 1024px</li>
+        <li class="first-dektop"><p>Reglas desktop</p>- Desktop(43%): 1024px - 1920px - ó más</li>
+    </ul>
+        
+
+
+</body>
+</html>

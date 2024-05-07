@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejecicio</title>
+    <style>
+        .header{
+            text-align: center;
+            font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+            color: black;
+            font-size: 3em;
+            background-color:rgb(13, 141, 215);
+        }
+        .header__titulo--tablet{
+            display: none;
+        }
+        .header__titulo--mobile{
+            display: none;
+        }
+        .header__titulo--desktop{
+            display: block;
+        }
+        @media screen and (max-width:768px) {
+            .header{
+                background-color:darkgoldenrod;
+                font-size: 2em;
+            } 
+            .header__titulo--tablet{
+                display: none;
+            }
+            .header__titulo--desktop{
+                display: none;
+            }
+            .header__titulo--mobile{
+            display: block;
+            }
+        }
+        @media screen and (min-width:768px) and (max-width:1024px){
+            .header{
+                background-color:rgb(11, 184, 31);
+                font-size: 2.5em;
+            }
+            .header__titulo--desktop{
+                display: none;
+            }
+            .header__titulo--mobile{
+                display: none;
+            }
+            .header__titulo--tablet{
+                display: block;
+            }
+        }
+    </style>
+</head>
+<body>
+    <Header class="header">
+        <h3 class="header__titulo header__titulo--desktop">
+            ESTE ES EL TITULO DE DESKTOP
+        </h3>
+        <h3 class="header__titulo header__titulo--tablet">
+            ESTE ES EL TITULO DE TABLET
+        </h3>
+        <h3 class="header__titulo header__titulo--mobile">
+            ESTE ES EL TITULO MOBILES
+        </h3>
+    </Header>
+    <main class="main">
+        <picture>
+            <source media="screen and (max-width:767px)" srcset="https://picsum.photos/300/300">
+            <source media="screen and (min-width:768px) and (max-width:1024px)" srcset="https://picsum.photos/700/700">
+            <img src="https://picsum.photos/2000/2000" alt="">
+        </picture>
+    </main>
+</body>
+</html>
