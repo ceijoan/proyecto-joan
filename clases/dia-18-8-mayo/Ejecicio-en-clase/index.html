@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./css/reset.css">
+    <link rel="stylesheet" href="./css/media-queries.css">
+</head>
+<body>
+    <!--Contenedor de los ementos-->
+    <main class="contenido">
+        <!--Titulos para cambiar deacuerdo al tamaño de la pantalla-->
+        <h1 class="titulo titulo--mobile">Mobile</h1>
+        <h1 class="titulo titulo--tablet">Tablet</h1>
+        <h1 class="titulo titulo--desktop">Desktop</h1>
+
+        <!--Imagen que debe cambiar de acuerdo al tamaño de la pantalla-->
+        <picture>
+            <source media="(min-width:1024px)" srcset="./img/desktop.jpeg">
+            <source media="(min-width:768px) and (max-width:1023px)" srcset="./img/tablet.jpeg">
+            <img src="./img/mobile.jpeg" alt="Foto">
+        </picture>
+    </main>
+</body>
+</html>

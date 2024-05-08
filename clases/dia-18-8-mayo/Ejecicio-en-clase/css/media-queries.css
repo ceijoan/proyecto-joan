@@ -1,0 +1,32 @@
+.contenido{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: coral;
+    transition: 2s;
+    color: #fff;
+}
+/*First mobile*/
+.titulo--mobile{
+    display: block;
+}
+.titulo--tablet, .titulo--desktop{
+    display: none;
+}
+@media screen and (min-width:768px) and (max-width:1024px){
+    .contenido{
+        background-color: green;
+    }
+    .titulo--tablet                      {display: block;}
+    .titulo--mobile, .titulo--desktop   {display: none;}
+}
+/*Media para desktop*/
+@media screen and (min-width:1024px){
+    .contenido{
+        background-color:blueviolet;
+    }
+    .titulo--desktop                    {display: block;}
+    .titulo--tablet, .titulo--mobile    {display: none;}
+}

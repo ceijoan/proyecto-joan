@@ -1,0 +1,44 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}    
+    
+    @media screen and (min-width:600px) {/*Con Screen modifica los elementos para cuando se va a imprimir la pantalla*/
+        .h1{
+            color: red;
+        }
+    }
+    @media print {/*Con PRINT modifica los elementos para cuando se va a imprimir la pagina*/
+        .h2{
+            display: none;
+        }
+    }
+
+
+    .h3{
+        color: blue;
+    }
+    @media (min-width:600px){
+        h3{
+            color: red;
+        }
+    }
+    /*Media para mobile*/
+    @media screen and (min-width:320px) and (max-width:768px){
+        .first-mobile{
+            background-color:chocolate;
+        }
+    }
+    /*Media para tablet*/
+    @media screen and (min-width:768px) and (max-width:1024px){
+        .first-tablet{
+            background-color: green;
+        }
+    }
+    /*Media para desktop*/
+    @media screen and (min-width:1024px){
+        .first-dektop{
+            background-color:blueviolet;
+        }
+    }
