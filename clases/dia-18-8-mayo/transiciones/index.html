@@ -24,9 +24,12 @@
             background-color:red;
             transition: 1s ease-in;
         }
-        .box--box2:hover{
+        .contenedor{
+            background-color: rebeccapurple;
+        }
+        .contenedor:hover .box--box2{
             transform:rotate(360deg);
-            transition: 1s ease-in-out;
+            transition: 1s ease-in-out 1s;
             height: 500px;
             width: 500px;
         }
@@ -36,11 +39,13 @@
 
         .box--box3:hover{
             border-radius: 50px;
-            translate: 500px;
+            border-radius: 30px;
+            transform: translateX(500px);
         }
         .box--box3{
             background-color:violet;
-            transition: 1s ease-out 2s;
+            transition: 1s ease-in-out 1s;
+
         }
 
     </style>
@@ -48,7 +53,9 @@
 <body>
     <main class="main">
         <div class="box box--box1"></div>
-        <div class="box box--box2"></div>
+        <div class="contenedor">
+            <div class="box box--box2"></div>
+        </div>
         <div class="box box--box3"></div>
     </main>
 </body>

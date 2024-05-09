@@ -76,3 +76,5 @@ div{
 - `ease-out`        : Velocidad rapida luego lenta
 - `ease-in-out`     : Velocidad lenta - rápida - lenta (mix entre easy-in easy-out pero un poco mas brusca )
 - `cubic-bazier()`  :
+
+[Página con ejemplos para cubic-bazier:](https://cubic-bezier.com/#.17,.67,.83,.67)

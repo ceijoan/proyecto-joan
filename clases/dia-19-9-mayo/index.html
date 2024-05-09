@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Modo claro - Oscuro </title>
+    <link rel="stylesheet" href="./css/style.css">
+</head>
+<body class="modo-claro">
+    <main class="contenedor">
+        <h1 class="titulo">
+            Nuestra primer web inteligente
+        </h1>
+        <img class="image" src="https://d6ce0no7ktiq.cloudfront.net/images/preview/2018/11/13/design-31776/template-sticker-600x600.png" alt="love javascript">
+        <div class="caja">
+            contenido
+        </div>
+        <button id="btn-o">Clic Oscuro</button>
+        <button id="btn-c">Clic Claro</button>
+    </main>
+
+    <script>
+        //1. En JS puedo agarrar elementos de la web con los selectores CSS 
+        const btn_o =document.querySelector("#btn-o");
+        const btn_c =document.querySelector("#btn-c");
+        const body =document.querySelector("body");
+        const imgTitulo =document.querySelector(".image");
+        //2. Cuando le hago clic a btn - Debe escuchar cuando doy clic en el boton
+        btn_o.addEventListener("click",() => {
+            //3.Debe agregar la clase .modo-oscuro al body
+            //alert("HOLAAAAA");
+            body.classList.toggle("modo-oscuro");
+        } );
+
+    </script>
+</body>
+</html>
