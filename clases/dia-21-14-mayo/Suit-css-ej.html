@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RRSS - Suit css - Fuentes - transiciones </title>
+    <!--Iconos de Font awesome-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+    <!--Iconos de Google-->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <!--Fuentes de google-->
+    <link href="https://fonts.googleapis.com/css2?family=Bungee+Spice&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./css/layout-rrss.css">
+    <link rel="stylesheet" href="./css/controllers.css">
+</head>
+<body>
+    <header class="Header">
+        <h1 class="u-txtFuente">RRSS</h1>
+    </header>
+     <main class="Contenedor u-bgSecundary">
+        <div class="Icons u-flex-col">
+            <div class="IconBox u-bgPrimary IconBox--fb">
+                <a class="IconBox-link" href="">
+                    <div class="IconBox-layers">
+                        <span class="IconBox-span u-bgPrimary"></span>
+                        <span class="IconBox-span u-bgPrimary"></span>
+                        <span class="IconBox-span u-bgPrimary"></span>
+                        <span class="IconBox-span u-bgPrimary"></span>
+                        <span class="IconBox-span u-bgPrimary fa-brands fa-square-facebook"></span>
+                    </div>
+                    <div class="IconBox-text"></i>
+                        Facebook
+                    </div>
+                </a>
+            </div>
+            
+
+            <div class="IconBox u-bgPrimary IconBox--x">
+                <a class="IconBox-link" href="">
+                    <div class="IconBox-layers">
+                        <span class="IconBox-span u-bgPrimary"></span>
+                        <span class="IconBox-span u-bgPrimary"></span>
+                        <span class="IconBox-span u-bgPrimary"></span>
+                        <span class="IconBox-span u-bgPrimary"></span>
+                        <span class="IconBox-span u-bgPrimary fa-brands fa-square-x-twitter"></span>
+                    </div>
+                    <div class="IconBox-text"></i>
+                        Twitter - X
+                    </div>
+                </a>
+            </div>
+            
+
+            <div class="IconBox u-bgPrimary IconBox--insta">
+                <a class="IconBox-link" href="">
+                    <div class="IconBox-layers">
+                        <span class="IconBox-span u-bgPrimary"></span>
+                        <span class="IconBox-span u-bgPrimary"></span>
+                        <span class="IconBox-span u-bgPrimary"></span>
+                        <span class="IconBox-span u-bgPrimary"></span>
+                        <span class="IconBox-span u-bgPrimary fa-brands fa-square-instagram"></span>
+                    </div>
+                    <div class="IconBox-text"></i>
+                        Instagram
+                    </div>
+                </a>
+            </div>
+           
+
+            <div class="IconBox u-bgPrimary IconBox--lkIn">
+                <a class="IconBox-link" href="">
+                    <div class="IconBox-layers">
+                        <span class="IconBox-span u-bgPrimary"></span>
+                        <span class="IconBox-span u-bgPrimary"></span>
+                        <span class="IconBox-span u-bgPrimary"></span>
+                        <span class="IconBox-span u-bgPrimary"></span>
+                        <span class="IconBox-span u-bgPrimary fa-brands fa-linkedin"></span>
+                    </div>
+                    <div class="IconBox-text"></i>
+                        LinkedIn
+                    </div>
+                </a>
+            </div>
+            
+
+            <div class="IconBox u-bgPrimary IconBox--yt">
+                <a class="IconBox-link" href="">
+                    <div class="IconBox-layers">
+                        <span class="IconBox-span u-bgPrimary"></span>
+                        <span class="IconBox-span u-bgPrimary"></span>
+                        <span class="IconBox-span u-bgPrimary"></span>
+                        <span class="IconBox-span u-bgPrimary"></span>
+                        <span class="IconBox-span u-bgPrimary fa-brands fa-square-youtube"></span>
+                    </div>
+                    <div class="IconBox-text"></i>
+                        Youtube
+                    </div>
+                </a>
+            </div>
+            
+
+            <div class="IconBox u-bgPrimary IconBox--lion">
+                <a class="IconBox-link" href="">
+                    <div class="IconBox-layers">
+                        <span class="IconBox-span u-bgPrimary"></span>
+                        <span class="IconBox-span u-bgPrimary"></span>
+                        <span class="IconBox-span u-bgPrimary"></span>
+                        <span class="IconBox-span u-bgPrimary"></span>
+                        <span class="IconBox-span u-bgPrimary">L</span>
+                    </div>
+                    <div class="IconBox-text"></i>
+                        Rey Leon
+                    </div>
+                </a>
+            </div>
+            
+        </div>
+     </main>
+
+     <div class="Controllers">
+        <button id="btnDirection" class="Btn">Columnas</button>
+        <button id="btnDarkMode" class="Btn Btn--icon ">
+            <span class="material-symbols-outlined">
+                dark_mode
+            </span>
+        </button>
+     </div>
+
+     <script>
+        //Declarar variables
+        const btnDirection = document.querySelector("#btnDirection");
+        const btnDarkmode = document.querySelector("#btnDarkMode");
+        const boxContainerIcons = document.querySelector(".Icons");
+        //Escuchar las variables y hacer algo con ellas y cambiar las clases
+
+        btnDirection.addEventListener("click", ()=> {
+            boxContainerIcons.classList.toggle("u-flex-col");
+            
+            if(boxContainerIcons.classList.contains('u-flex-col')){
+                
+                btnDirection.textContent = "Fila";
+            }else{
+   
+                btnDirection.textContent = "Columna";
+            }
+        });
+
+        btnDarkmode.addEventListener("click", ()=> {
+
+
+        });
+     </script>
+</body>
+</html>

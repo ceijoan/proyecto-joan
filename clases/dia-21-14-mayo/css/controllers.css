@@ -1,0 +1,79 @@
+/*-------------------------------------------*/
+/*               VARIABLES                   */
+/*-------------------------------------------*/
+:root{
+    --bg-primary:#fff;
+    --bg-secondary:#e6e6e6;
+    --txt-primary:#000;
+    --txt-secondary:#222;
+    --box-shadow: 1px 1px 5px rgb(0,0,0,0.5);
+}
+
+/*-------------------------------------------*/
+/*               CONTROLLERS                 */
+/*-------------------------------------------*/
+.Controllers{
+    position: fixed;
+    right: 10px;
+    bottom: 20px;
+    /*left: 50%;
+    translate: (-50%); forma de centrar un elemento*/
+    display: flex;
+    gap: 10px;
+    padding: 10px;
+    background: gray;
+}
+.Btn{
+    color: var(--txt-primary);
+    background: var(--bg-primary);
+    box-shadow: var(--box-shadow);
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+    min-width: 100px;
+    border-radius: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.Btn--icon{
+    min-width: unset;
+    border-radius: 100%;
+}
+/*-------------------------------------------*/
+/*             MODO CLARO OSCURO             */
+/*-------------------------------------------*/
+
+.u-dark{
+    --bg-primary:#000;
+    --bg-secondary:#222;
+    --txt-primary:#fff;
+    --txt-secondary:#e6e6e6;
+    --box-shadow: 1px 1px 5px rgba(255, 255, 255, 0.5);
+}
+
+
+
+/*-------------------------------------------*/
+/*           Clases Reutilizables            */
+/*-------------------------------------------*/
+.u-bgPrimary{
+    background: var(--bg-primary);
+}
+.u-bgSecundary{
+    background: var(--bg-secondary);
+}
+.u-txtPrimary{
+    color: var(--txt-primary);
+}
+.u-txtSecundary{
+    color: var(--txt-secondary);
+}
+.u-flex-col{
+    display: flex;
+    flex-direction: column;
+}
+.u-flex-row{
+    display: flex;
+    flex-direction: row;
+}

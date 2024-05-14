@@ -1,0 +1,40 @@
+@font-face {
+    font-family:"Crotah";
+    src: url("../fonts/Crotah.ttf")format("truetype");/*ttf: truetype - otf:opentype - woff:woff - woff2:woff2*/
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+body{
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+}
+.u-txtFuente{
+    font-family: "Crotah";
+}
+.Header{
+    display: flex;
+    justify-content:space-between;
+    align-items: center;
+    padding: 10px 20px;
+    background-color: gray;
+    box-shadow: 0 2px 5px rgb(0,0,0,0.1);
+}
+.Contenedor{
+    flex-grow: 1;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    display: flex;
+}
+
+.Icons{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+}
