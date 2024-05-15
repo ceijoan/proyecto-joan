@@ -1,0 +1,156 @@
+/*-------------------------------------------*/
+/*               VARIABLES                   */
+/*-------------------------------------------*/
+:root{
+    --fb-color:#4267B2;
+    --x-color:#000;
+    /*--tw-color:#1dA1F2;*/
+    --in-color:#E1306C;
+    --lkin-color:#2867B2;
+    --yt-color:#ff0000;
+    --lion-color:#DB9601;
+    --box-shadow: 1px 1px 5px rgb(0,0,0,0.5);
+}
+/*-------------------------------------------*/
+
+.Icons{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+.IconBox-link{
+    margin: 0 25px;
+    text-decoration: none;
+    display: block;
+    position: relative;
+
+    /* */
+}
+
+.IconBox-layers{
+    width: 55px;
+    height: 55px;
+}
+.IconBox:hover .IconBox-layers{
+    transform: rotate(-35deg) skew(20deg);
+}
+.IconBox-span{
+    position: absolute;
+    border: 1px solid #fff;
+    top:0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border-radius: 5px;
+    font-size: 30px;
+    line-height: 55px;
+    text-align: center;
+}
+/*         Capas para repetir el icono              */
+.IconBox:hover .IconBox-span:nth-child(1){
+    opacity: 0.2;
+
+}
+.IconBox:hover .IconBox-span:nth-child(2){
+    opacity: 0.4;
+    transform: translate(5px, -5px);
+}
+.IconBox:hover .IconBox-span:nth-child(3){
+    opacity: 0.6;
+    transform: translate(10px, -10px);
+}
+.IconBox:hover .IconBox-span:nth-child(4){
+    opacity: 0.8;
+    transform: translate(15px, -15px);
+}
+.IconBox:hover .IconBox-span:nth-child(5){
+    opacity: 1;
+    transform: translate(20px, -20px);
+}
+
+
+
+/*---------------------------------------------------*/
+/*                  Colores de iconos                */
+/*---------------------------------------------------*/
+.IconBox--fb .IconBox-span,
+.IconBox--fb .IconBox-text{
+    color: var(--fb-color);
+    border-color: var(--fb-color);
+}
+
+.IconBox--x .IconBox-span,
+.IconBox--x .IconBox-text{
+    color: var(--x-color);
+    border-color: var(--x-color);    
+}
+.IconBox--in .IconBox-span,
+.IconBox--in .IconBox-text{
+    color: var(--in-color);
+    border-color: var(--in-color);
+}
+.IconBox--lkIn .IconBox-span,
+.IconBox--lkIn .IconBox-text{
+    color: var(--lkin-color);
+    border-color: var(--lkin-color);
+}
+.IconBox--yt .IconBox-span,
+.IconBox--yt .IconBox-text{
+    color: var(--yt-color);
+    border-color: var(--yt-color);
+}
+.IconBox--lion .IconBox-span,
+.IconBox--lion .IconBox-text{
+    color: var(--lion-color);
+    border-color: var(--lion-color);
+}
+
+.IconBox-text{
+    position: absolute;
+    bottom: -5px;
+    left: 50%;
+    font-weight: 500;
+    opacity: 0;
+    transform: translate(-50%);
+    transition: bottom 0.3s ease, opacity 0.3s ease;
+}
+.IconBox:hover .IconBox-text{
+    opacity: 1;
+    bottom: -35px;
+}
+.IconBox{
+    padding-bottom: 35px;
+}
+/*---------------------------------------------------*/
+/*                  Fuente rey leon                  */
+/*---------------------------------------------------*/
+.IconBox--lion .IconBox-text,
+.IconBox--lion .IconBox-span{
+    font-family: "Bungee Spice";
+    white-space: nowrap;
+}
+
+/*---------------------------------------------------*/
+/*                Sombras de layer                   */
+/*---------------------------------------------------*/
+.IconBox--fb:hover .IconBox-span{
+    box-shadow: -1px 1px 3px var(--fb-color);
+}
+.IconBox--x:hover .IconBox-span{
+    box-shadow: -1px 1px 3px var(--x-color);
+}
+.IconBox--in:hover .IconBox-span{
+    box-shadow: -1px 1px 3px var(--in-color);
+}
+.IconBox--lkIn:hover .IconBox-span{
+    box-shadow: -1px 1px 3px var(--lkin-color);
+}
+.IconBox--yt:hover .IconBox-span{
+    box-shadow: -1px 1px 3px var(--yt-color);
+}
+.IconBox--lion:hover .IconBox-span{
+    box-shadow: -1px 1px 3px var(--lion-color);
+}
+/*.IconBox--lion-color:hover .IconBox-span:nth-child(even){
+    box-shadow: -1px 1px 3px var(--yt-color);
+}*/

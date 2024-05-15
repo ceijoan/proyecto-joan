@@ -12,15 +12,17 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <!--Fuentes de google-->
     <link href="https://fonts.googleapis.com/css2?family=Bungee+Spice&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="./css/layout-rrss.css">
+    <link rel="stylesheet" href="./css/rrss.css">
     <link rel="stylesheet" href="./css/controllers.css">
+    <link rel="stylesheet" href="./css/layout-rrss.css">
 </head>
 <body>
-    <header class="Header">
-        <h1 class="u-txtFuente">RRSS</h1>
+    <header class="Header u-bgPrimary">
+        <h1 class="u-txtFuente u-txtPrimary">RRSS</h1>
     </header>
      <main class="Contenedor u-bgSecundary">
-        <div class="Icons u-flex-col">
+        <div class="Icons">
+            
             <div class="IconBox u-bgPrimary IconBox--fb">
                 <a class="IconBox-link" href="">
                     <div class="IconBox-layers">
@@ -53,7 +55,7 @@
             </div>
             
 
-            <div class="IconBox u-bgPrimary IconBox--insta">
+            <div class="IconBox u-bgPrimary IconBox--in">
                 <a class="IconBox-link" href="">
                     <div class="IconBox-layers">
                         <span class="IconBox-span u-bgPrimary"></span>
@@ -148,7 +150,14 @@
         });
 
         btnDarkmode.addEventListener("click", ()=> {
+            document.body.classList.toggle("u-dark");
 
+            if(document.body.classList.contains('u-dark')){
+                btnDarkmode.querySelector("span").innerHTML  = "brightness_6";
+            }else{
+   
+                btnDarkmode.querySelector("span").innerHTML = "dark_mode";
+            }
 
         });
      </script>

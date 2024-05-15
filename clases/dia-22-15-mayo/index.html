@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejemplos de medidas px, %, em, rem</title>
+    <style>
+        :root{
+            font-size: 16px;/*Tamaño por defecto 1rem = 16px*/
+        }
+        .pixel-box{
+            width: 200px;
+            height: 100px;
+            background-color: lightblue;
+            margin-bottom: 20px;
+        }
+        .em-box{
+            width: 20em;
+            height: 10em;
+            background-color: lightcoral;
+            margin-bottom: 20px;
+        }
+        .rem-box{
+            width: 10rem;
+            height: 5rem;
+            background-color: lightgreen;
+            margin-bottom: 20px;
+        }
+        .porcent-box{
+            width: 50%;
+            height: 100px;
+            height: 100px;
+            background-color:lightseagreen;
+            margin-bottom: 20px;
+        }
+        .box-container{
+            font-size: 16px;
+        }
+        .boton{
+            font-size: 20px;
+            background-color: blueviolet;
+            color: aliceblue;
+            border: none;
+            padding: 0.5em 1em;
+        }
+    </style>
+</head>
+<body>
+    <h1>Ejemplos de unidades de medida</h1>
+    <div class="box-container">
+        <div class="pixel-box">
+            Caja con medidas (200px x 100px)
+        </div>
+        <div class="em-box">
+            Caja con medida en EM (20em x 10em)
+        </div>
+        <div class="rem-box">
+            Caja con medidas en REM (10rem x 5 rem)
+        </div>
+        <div class="porcent-box">
+            Caja con medidas en % (50% del contenedor)
+        </div>
+    </div>
+
+    <button class="boton">Contactar</button>
+</body>
+</html>
