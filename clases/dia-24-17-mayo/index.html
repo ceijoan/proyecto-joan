@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EM VS REM</title>
+    <style>
+        :root{
+            font-size: 10px;
+        }
+        body{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+        .Card{
+            font-size: 2rem;
+            
+            padding: 2rem;
+            background-color: red;
+            border-radius: 0.5rem;
+            text-align: center;
+            max-width: 400px;
+        }
+        .Card-box{
+            border: 1px solid #000;
+            background-color: gray;
+            width: 10rem;
+            height: 10rem;
+            color: white;
+        }
+        .Card-box--EM{
+            width: 10em;
+            height: 10em;
+        }
+    </style>
+</head>
+<body>
+    <div class="Card">
+        <h2>EM VS REM</h2>
+        <p>
+            <strong>EM</strong> Es una medida en relacion al font-size de si mismo o de su padre  mas cércano
+        </p>
+        <p>
+            <strong>REM</strong> Es una medida en relacion al font-size del root(html) de nuestro documento
+        </p>
+        <div class="Card-box">
+
+        </div>
+        <div class="Card-box Card-box--EM">
+            EM (fs-card)
+        </div>
+        <div class="Card-box Card-box--EM">
+            EM (fs-30)
+        </div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=ç, initial-scale=1.0">
+    <title>Practica Grid</title>
+    <style>
+        :root{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        .Contenedor{
+            height: 90vh;
+            width: 90vw;
+        }
+        .Galeria{
+            display: grid;
+            grid-template-columns: repeat(6, 1fr);
+            grid-template-rows: repeat(5, 1fr);
+            gap: 3px;
+        }
+        .Galeria-img{
+            width: 100%;
+            height: 100%;
+        }
+        .Galeria-img--4{
+            grid-row: span 2;
+            grid-column: span 2;
+        }
+        .Galeria-img--2f{
+            grid-row: span 2;
+        }
+        .Galeria-img--2c{
+            grid-column: span 2;
+        }
+    </style>
+</head>
+<body>
+    <main class="contenedor">
+        <section class="Galeria">
+            <img class="Galeria-img" style="grid-area: 1,1,3,3;" src="./images/Masonry-list-img-1-500x500.jpg" alt="">
+            <img class="Galeria-img" src="./images/Masonry-list-img-2-500x500.jpg" alt="">
+            <img class="Galeria-img Galeria-img--2f" src="./images/Masonry-list-img-3-500x1000.jpg" alt="">
+            <img class="Galeria-img" src="./images/Masonry-list-img-4-500x500.jpg" alt="">
+            <img class="Galeria-img Galeria-img--4" src="./images/Masonry-list-img-5-1000x1000.jpg" alt="">
+            <img class="Galeria-img" src="./images/Masonry-list-img-6-500x500.jpg" alt="">
+            <img class="Galeria-img" src="./images/Masonry-list-img-7-500x500.jpg" alt="">
+            <img class="Galeria-img" src="./images/Masonry-list-img-8-500x500.jpg" alt="">
+            <img class="Galeria-img Galeria-img--4" src="./images/Masonry-list-img-9-1000x1000.jpg" alt="">
+            <img class="Galeria-img" src="./images/Masonry-list-img-11-500x500.jpg" alt="">
+            <img class="Galeria-img" src="./images/Masonry-list-img-10-500x500.jpg" alt="">
+            <img class="Galeria-img Galeria-img--2f" src="./images/Masonry-list-img-12-500x1000.jpg" alt="">
+            <img class="Galeria-img" src="./images/Masonry-list-img-13-500x500.jpg" alt="">
+            <img class="Galeria-img" src="./images/Masonry-list-img-15-500x500.jpg" alt="">
+            <img class="Galeria-img" src="./images/Masonry-list-img-14-500x500.jpg" alt="">
+            <img class="Galeria-img" src="./images/Masonry-list-img-16-500x500.jpg" alt="">
+            <img class="Galeria-img Galeria-img--2c" src="./images/Masonry-list-img-17-1000x500.jpg" alt="">
+            <img class="Galeria-img" src="./images/Masonry-list-img-19-500x500.jpg" alt="">
+            <img class="Galeria-img" src="./images/Masonry-list-img-18-500x500.jpg" alt="">
+            <img class="Galeria-img" src="./images/Masonry-list-img-21-500x500.jpg" alt="">
+            <img class="Galeria-img" src="./images/Masonry-list-img-20-500x500.jpg" alt="">
+        </section>
+    </main>
+</body>
+</html>
