@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <button id="btn"> DAME CLIC</button>
+
+    <h3>CANTIDAD DE CLICS</h3>
+    <div id="result">0</div>
+    <button id="disminuye">DISMINUYE</button>
+    <button id="aumenta">AUMENTA</button>
+    <script>
+        /*let numero = 1;
+        const miBtn = document.getElementById("btn");
+
+        miBtn.addEventListener("click" , ()=>{
+            miBtn.innerHTML="YA NO MÁS";
+        })*/
+
+        let numero2=0;
+        const btnAumenta = document.getElementById("aumenta");
+        const btnDisminuye = document.getElementById("disminuye");
+        const resultado = document.getElementById("result");
+        
+        btnAumenta.addEventListener("click", ()=>{
+            numero2 = numero2+1;
+            resultado.innerHTML=numero2;
+        })
+        btnDisminuye.addEventListener("click", ()=>{
+            numero2 = numero2-1;
+            resultado.innerHTML=numero2;
+        })
+    </script>
+    <script src="./js/miweb.js"></script> <!---Esta es la forma correcta de agregar JS linkeado externamente-->
+</body>
+</html>
