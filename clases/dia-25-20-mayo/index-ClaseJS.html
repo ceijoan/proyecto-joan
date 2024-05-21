@@ -12,6 +12,7 @@
     <div id="result">0</div>
     <button id="disminuye">DISMINUYE</button>
     <button id="aumenta">AUMENTA</button>
+    <button id="multipli">MULTIPLICA  x 5</button>
     <script>
         /*let numero = 1;
         const miBtn = document.getElementById("btn");
@@ -20,19 +21,31 @@
             miBtn.innerHTML="YA NO MÁS";
         })*/
 
+
         let numero2=0;
         const btnAumenta = document.getElementById("aumenta");
         const btnDisminuye = document.getElementById("disminuye");
+        const btnMultipli = document.getElementById("multipli");
         const resultado = document.getElementById("result");
         
         btnAumenta.addEventListener("click", ()=>{
             numero2 = numero2+1;
-            resultado.innerHTML=numero2;
+            imprimirEnPatalla(numero2);// Aquí envia el dato.
         })
         btnDisminuye.addEventListener("click", ()=>{
             numero2 = numero2-1;
-            resultado.innerHTML=numero2;
+            imprimirEnPatalla(numero2);
         })
+        btnMultipli.addEventListener("click", ()=>{
+            numero2 = numero2*5;
+            imprimirEnPatalla(numero2);
+        })
+
+
+        function imprimirEnPatalla(numero2){//Siempre que se recibe un dato, debe enviar dato
+            resultado.innerHTML=numero2;
+        }
+
     </script>
     <script src="./js/miweb.js"></script> <!---Esta es la forma correcta de agregar JS linkeado externamente-->
 </body>

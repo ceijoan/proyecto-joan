@@ -117,23 +117,30 @@ function sumar(a,b){
 ```js
 // TIPOS DE VARIABLES
 // PRIMITIVOS
-let numero = 123;
-let decimales = 22.30;
-let negativos = -3;
-
+// let es una variable que puede var y cambiar. const es una variable que es constante y no puede variar.
 let texto = "Hola Alumnos CEI";
 let textoConComillas = 'Hola Estoy bien';
 let textoConComillasSimples = "I'm Tomi";
 let texto = `Quiero comillas 'Simples' y "dobles" ` //Template String
+
+let numero = 123;//este es un número
+let numero ="123"; //Este es un texto o string
+let miNumero = Number("1233")//Sirve para combertir un texto(string) en número o algún tipo de elemento
+
+let decimales = 22.30;
+let negativos = -3;
 const PI = 3.1416;
-let miNumero = Number("1233")//Sirve para combertir un texto en numero o algun tipo de elemento
+
+
+
 let estaPrendido = false;
 let isPrimary = true;
 let onActive = false;
 
 
-// REFERENCIA
-// Son elementosque vienen tipo ARRAY o caja de elementos
+
+// REFERENCIALES
+// Son elementosque vienen tipo ARRAY o caja de elementos. La diferencia de los array y los objetos es que aun que sean *const*  se pueden cambiar... El Const es para asegurar que siempre sea una lista.
 
 //ARRAY
 let alumnosDev = ["Nerea", "David", "Jenny", ...];
@@ -149,4 +156,40 @@ const listMixta = [1, "Juan", ]
         isRecibido=true;
     },
  };
+
+```
+## Lectura de una variable
+
+### Objetos    
+```js
+// Esto es una lectura de una variable
+    let texto = "Hola Alumnos CEI";
+    console.log(texto);
+    let miNuevaVar = texto;
+    
+    // Esto es la lectura de una propiedad
+
+    const alumno = {
+        nombre:"Mario", 
+        edad: 33, 
+        isRecibido: false,
+        presentarProyecto: function()=>{
+            isRecibido=true;
+        },
+    };
+    console.log("La edad de maria es", alumno.edad);//Imprime un mensaje en la consola que dice "La edad de maria es 33"
+
+    alumno.presentarProyecto();
+    console.log();
+```
+### Listas
+```js
+    // Se crea la lista
+    const listaDeCompras = ["tomate", "Lechuga"];
+    listaDeCompras = ["tomate", "Lechuga", "patatas"];//Se agrega una lista nueva y agrega patatas.
+
+    //Las listas empiezan con el indice 0 y se lee asi:
+    console.log(listaDeCompras[0] );
+    console.log(listaDeCompras[1] );
+    console.log(listaDeCompras[2] );
 ```
