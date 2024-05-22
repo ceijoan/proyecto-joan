@@ -108,8 +108,9 @@ Si el restpo de la division es un número por 2 es igual a 1 es *IMPAR*
     let numero = 10;
     let esPar= (numero%2 === 0)     // Es true
     let esImpar = (numero%2 !== 0)  // Es false
-```
 
+    //Los comparativos siempre responde un varlo boolean: true o false. pues lo que hace es hacer preguntas.
+```
 - Comparativos
 Se utilizan para comparar valores en js
     - Igual `==`: Comparo si 2 valores son iguales
@@ -125,34 +126,42 @@ Se utilizan para comparar valores en js
     let a = 10;
     let b = "10";
 
-    let esIgual = (a == b); //false
-    let esEstrictamenteIgual = (a === b); //true
-    let esDistinto = (a != b); //false
-    let esEstrictamenteDistinto = (a !== b); //true
+    let esIgual =                   (a == b); //false
+    let esEstrictamenteIgual =      (a === b); //true
+    let esDistinto =                (a != b); //false
+    let esEstrictamenteDistinto =   (a !== b); //true
 
     let num1 = 10;
     let num2 = 5;
 
-
-    let mayorque =(num1 > num2);//true
-    let menorque =(num1 < num2);//false
-
-    let mayorIgualQue =(num1 >= num2);//true
-    let menorIgualQue =(num1 <= num2);//false
+    let mayorque =                  (num1 > num2);//true
+    let menorque =                  (num1 < num2);//false
+    let mayorIgualQue =             (num1 >= num2);//true
+    let menorIgualQue =             (num1 <= num2);//false
     ```
 
-- Funciones 
-Es un bloque de código o algoritmo que realiza una operación especifica. Puede recibir valores de entrada y devolver un único resultado.
-
+- Logicos
+Podemos Verificar que multiples operaciones sean verdaderas usando estos operadores:
+    - `&&`: Se tienen que cumplir todas las comparaciones (Y)
+    - `||`: Se tiene que cimplir almenos una de las comparaciones (O)
+    - `!` : Hace lo contrario de lo que es
 ```js
-function saludar(nombre, edad){
-    //Código que va a realizar mi funcion , rodeado entre { }
-    console.log("Hola a todos!!, mi nombre es " + nombre);
-    console.log("Mi edad es " + edad);
+if (edad > 21 && acepteTyC==true){
+    //registra al usuasrio
+} 
+
+if (diaSemana == "Sabado" || diaSemana =="Domingo"){
+    return "Es fin de semana!";
 }
 
-//recive la variable "nombre" y la puede usar entre parentesis
-//Llama a la funcion
-saludar("Juan", 18 );
-saludar("Sebastain" , 30);  
+if (num % 2 === 0){
+    //es par
+}
+if (num % 2 == 0){
+    //es impar
+}
+if (!true){
+    //false
+}
+    
 ```
