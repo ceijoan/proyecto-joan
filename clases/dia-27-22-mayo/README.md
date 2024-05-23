@@ -1,6 +1,5 @@
 - Funciones 
-Es un bloque de código o algoritmo que realiza una operación especifica. Puede recibir valores de entrada `Parámetros` y devolver un único resultado. Los valores que se pasan a la función cuando se invoca, se llaman `argumentos`.
-
+Es un bloque de código o algoritmo que realiza una operación especifica. Puede recibir valores de entrada `Parámetros` y devolver un único resultado. Los valores que se pasan a la función cuando se invoca, se llaman `argumentos`. Tenemos la opción de inicializar un parametro con un valor. Recordemos dejar estos parametros "Inicializados" al final de la la lista.
 
 ```js
 /**
@@ -11,7 +10,7 @@ Es un bloque de código o algoritmo que realiza una operación especifica. Puede
  * @return {void} - No devuelve nada
  **/
 
-function Saludar(nombre, edad){
+function Saludar(nombre, edad, genero="No indicado"){
     //Código que va a realizar mi funcion , rodeado entre { }
     let respuesta; // 1. crer variable
     respuesta = ("Hola a todos!!, mi nombre es " + nombre + "y mi edad es " + edad); //2. actualizo la informacion de mi variable
@@ -72,11 +71,57 @@ if(edad >= 18){
 }else{
     console.log("El número es IMPAR");
 }
+/**
+ * EJ 3: Anidar if dentro de otro
+ **/
+let edad = 16;
+
+if(edad > 18){
+    if (edad >100){
+        //el numero esta entre 25 y 100
+    }
+    else{
+        //el numero es menor a 100
+    }
+}else{
+    console.log(" ");
+}
+
 ```
+## Uso de Bucles
+Los Bucles permiten repetir código varias veces. En JS tenemos 3 tipos de Bubles:
+    - `for`: Se utiliza cuando sabemos cuantas veces queremos que se repita
+    - `while`: Se utiliza cuando no sabemos cuantas veces se va a repetir ek bloque de código.
+    - `do-while`: Es igual al `while` pero se ejecuta al menos una vez.
 
-- Comparadores Logicos
+```js
+//FOR
+for(let contador=0; contador < 10; contador++){
+    Console.log("Hola Alumnos!!!" + contador);
+}
+//While
+let i =0;
+while(i < 10){
+    console.log ("Hola Alumnos");
+    i++;
 
+    //i va a ser al azar
+}
+let salir =false;
+while(salir == false){
+    console.log ("Me quedo jugando");
+   
+    salir = true;
+}
 
+// do-While
+// Se ejecuta almenos una vez
+let i = 0;
+do {
+    console.log("Hola Alumnos");
+}while(i<5);
+```
+![imagen de ejecicio bucle](./img/img-blucle.png)
 
 
 ### Ejercicio de practica
@@ -87,14 +132,3 @@ if(edad >= 18){
 5. Crear un función donde sus parametros sean jugador1 y jugador2 y vuelve si el jugador1 le gana a el jugador2 en un juego de `piedra` `papel` o `tijera`.
 6. Modificar la calculadora del dia 25 para que podamos Sumar, restar, multiplicar o dividir 2 valores utilizando funciones.
 
-
-## Uso de Bucles
-Los Bucles permiten repetir código varias veces. En JS tenemos 3 tipos de Bubles:
-    - `for`: Se utiliza cuando sabemos cuantas veces queremos que se repita
-    - `while`:
-    - `do-while`: 
-```js
-for(let contador=0; contador<10; contador++){
-    Console.log("Hola Alumnos!!!" + contador);
-}
-```

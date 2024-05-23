@@ -140,16 +140,19 @@ Se utilizan para comparar valores en js
     let menorIgualQue =             (num1 <= num2);//false
     ```
 
-- Logicos
+- Comparadores Logicos
 Podemos Verificar que multiples operaciones sean verdaderas usando estos operadores:
     - `&&`: Se tienen que cumplir todas las comparaciones (Y)
-    - `||`: Se tiene que cimplir almenos una de las comparaciones (O)
+    - `||`: Se tiene que cumplir almenos una de las comparaciones (O)
     - `!` : Hace lo contrario de lo que es
 ```js
 if (edad > 21 && acepteTyC==true){
     //registra al usuasrio
 } 
 
+if (edad > 21 || (edad >10 && autorizacionDelPadre ==true) ){
+    //Tambien se puede hacer comparaciones anidadas para que se cumplan las condiciones
+}
 if (diaSemana == "Sabado" || diaSemana =="Domingo"){
     return "Es fin de semana!";
 }
