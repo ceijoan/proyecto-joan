@@ -1,0 +1,21 @@
+.txtResultado{
+    border: 1px dashed black;
+}
+.u-bgRed{
+    background-color: red;
+}
+.u-bgBlue{
+    background-color: blue;
+}
+
+.progressBar{
+    width: 100%;
+    display: flex;
+    background-color: gray;
+    text-align: center;
+}
+.progressBar-item{
+    color: white;
+    width: 0%;
+    transition: width 1s;
+}

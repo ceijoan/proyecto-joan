@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejemplo de Objetos - JS</title>
+</head>
+<body>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        .flexContainer{
+            display: flex;
+        }
+        .micaja{
+            width: 100px;
+            height: 100px;
+            background-color:red;
+        }
+    </style>
+    <h1>Ejemplo de Objeto</h1>
+    <div class="flexContainer">
+        <div class="micaja" id="caja1">
+            SOY UN DIV
+        </div>
+        <div class="micaja" id="caja2">
+            SOY UN DIV
+        </div>
+    </div>
+
+    <script>
+        let nombre = "Tom";
+        //Variables globales funcionan en todo el codigo
+        function miNombre (){
+            let apellido ="Martines";
+            //variables locales solo funciona en (Funcione y objetos)
+            if (miNombre =="Tom"){
+                let saludar = true;
+                //variable de bloque (solo funciona en for - whiles - if - dowhile)
+            }
+        }
+    </script>
+
+
+
+
+
+
+
+    <script>
+        //1. Generar variables
+        const myDiv1 = document.getElementById("caja1");
+        const myDiv2 = document.getElementById("caja2");
+        const container = document.getElementsByClassName("flexContainer");
+
+        const divCambio ={
+            objetoACambiar:null,
+            cambiarAncho: function(ancho){
+                this.objetoACambiar.style.width = ancho;
+            },
+            cambiarAlto: function(alto){
+                this.objetoACambiar.style.height = alto;
+            },
+            cambiarAnchoAlto: function(medida){
+                this.objetoACambiar.style.width = medida;
+                this.objetoACambiar.style.height = medida;
+            },
+            cambiarFondo: function(url){
+                this.objetoACambiar.style.backgroundImage = (`url ${url}`);
+                this.objetoACambiar.style.backgroundColor = (`blue`);
+
+
+
+            }
+        }
+        //Crear funciones
+
+
+        //3. Ejecutar codigo
+        divCambio.objetoACambiar = myDiv1;
+        divCambio.cambiarAncho("200px");
+
+        divCambio.objetoACambiar = myDiv2;
+        divCambio.cambiarAncho("300px");
+
+        divCambio.objetoACambiar =myDiv1;
+        divCambio.cambiarAnchoAlto("200", "300");
+
+        myDiv1.style.border="1px solid black";
+    </script>
+</body>
+</html>

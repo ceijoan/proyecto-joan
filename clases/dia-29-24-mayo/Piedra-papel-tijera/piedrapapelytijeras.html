@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Piedra papel y tijera</title>
+    <link rel="stylesheet" href="./css/style.css">
+</head>
+<body>
+    <h1>Piedar papel o tijeras</h1>
+    <button onclick="jugar(piedra);" class="piedra">piedra</button>
+    <button onclick="jugar(papel);"class="Papel">Papel</button>
+    <button onclick="jugar(tijera);"class="Tijera">Tijera</button>
+
+    <div class="txtResultados"></div>
+    <hr>
+    <p>Ganadas: <span id="ganadas">0</span></p>
+    <hr>
+    <p>Empatadas: <span id="empatadas">0</span></p>
+    <hr>
+    <p>Perdidas: <span id="perdidas">0</span></p>
+    <hr>
+    <p>Stadisticas</p>
+    <div class="estadisticas"></div>
+    <hr>
+    <p>Grafica</p>
+    <div class="progressBar">
+        <div class="progressBar-item u-bgRed">
+            Perdidas
+        </div>
+        <div class="progressBar-item u-bgBlue">
+            Ganadas
+        </div>
+    </div>
+
+    <script src="./js/ejercicio.js"></script>
+</body>
+</html>

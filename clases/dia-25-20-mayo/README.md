@@ -160,7 +160,10 @@ const listMixta = [1, "Juan", ]
 ```
 ## Lectura de una variable
 
-### Objetos    
+### Objetos 
+Grupo o coleccion de propiedades; Cada propiedad tiene sus respectivos nombres clave y valores. SUs valores pueden ser de todo tipo: datos, variables funciones, otros objetos, etc.
+
+En el caso de que sean Funciones a estas propiedades las llamamos metodos.
 ```js
 // Esto es una lectura de una variable
     let texto = "Hola Alumnos CEI";
