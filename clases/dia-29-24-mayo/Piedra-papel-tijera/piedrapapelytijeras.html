@@ -3,36 +3,36 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Piedra papel y tijera</title>
-    <link rel="stylesheet" href="./css/style.css">
+    <title>Piedra-Papel-Tijera</title>
+    <link rel="stylesheet" href="./css/styles.css">
 </head>
 <body>
-    <h1>Piedar papel o tijeras</h1>
-    <button onclick="jugar(piedra);" class="piedra">piedra</button>
-    <button onclick="jugar(papel);"class="Papel">Papel</button>
-    <button onclick="jugar(tijera);"class="Tijera">Tijera</button>
+    <h1>Piedra Papel Tijera</h1>
 
-    <div class="txtResultados"></div>
+    <button onClick="jugar('piedra')">Piedra 👊🏻</button>
+    <button onClick="jugar('papel')">Papel ✋🏻</button>
+    <button onClick="jugar('tijera')">Tijeras ✌🏻</button>
+
+    <div class="txtResultado"></div>
+
     <hr>
     <p>Ganadas: <span id="ganadas">0</span></p>
-    <hr>
-    <p>Empatadas: <span id="empatadas">0</span></p>
-    <hr>
     <p>Perdidas: <span id="perdidas">0</span></p>
+    <p>Empatadas: <span id="empatadas">0</span></p>
+
     <hr>
-    <p>Stadisticas</p>
-    <div class="estadisticas"></div>
+
+    Stats
+    <div class="txtEstadisticas"></div>
+
     <hr>
-    <p>Grafica</p>
+
+    Grafica
     <div class="progressBar">
-        <div class="progressBar-item u-bgRed">
-            Perdidas
-        </div>
-        <div class="progressBar-item u-bgBlue">
-            Ganadas
-        </div>
+        <div class="progressBar-item u-bgRed">Ganadas</div>
+        <div class="progressBar-item u-bgBlue">Perdidas</div>
     </div>
 
-    <script src="./js/ejercicio.js"></script>
+    <script src="./js/scripts.js"></script>
 </body>
 </html>
