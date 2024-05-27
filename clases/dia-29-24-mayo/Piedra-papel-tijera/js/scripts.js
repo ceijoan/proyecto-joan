@@ -30,7 +30,7 @@ const objPuntaje= {
         user_tijera: 999
     }
 }
-
+let intervaloAI;
 
 /* --------------------------------
 /*  2. Declaramos funciones
@@ -85,6 +85,17 @@ function jugar(jugador){
     mostrarEstadisticas();
 }
 
+function AIvsAI(){
+    //intervalo para ejecutar algo muchas veces: Recibe 2 parametros(una funcion, cada cuanto lo voy a hacer)
+    intervaloAI = setInterval( ()=> {
+        const jugadorAI2 =elegirAutomaticamente();
+        jugar(jugadorAI2);
+
+    }, 1000);//1seg = 1000 milisegundos.  
+}
+
+
+
 function elegirAutomaticamente(){
     const opciones=["piedra", "papel", "tijera"];
     // 0-2 (3 es lo mismo que opciones.length)
@@ -98,6 +109,18 @@ function mostrarEstadisticas(){
     txtGanadas.innerText = objPuntaje.ganadas;
     txtPerdidas.innerText = objPuntaje.perdidas;
     txtEmpatadas.innerText = objPuntaje.empatadas;
+
+    txtEstadisticas.innerHTML=`
+    <div> 
+        <h3>Stats AI</h3>
+            👊🏻x ${objPuntaje.stats.ai_piedra}
+            ✋🏻x ${objPuntaje.stats.ai_papel}
+            ✌🏻x ${objPuntaje.stats.ai_tijera}
+        <h3>Stats Usuario</h3>
+            👊🏻x ${objPuntaje.stats.user_piedra}
+            ✋🏻x ${objPuntaje.stats.user_papel}
+            ✌🏻x ${objPuntaje.stats.user_tijera}
+    </div>`;
 
     // graficar Barra
     graficarBarra();
@@ -116,6 +139,7 @@ function graficarBarra(){
 
 // vaciar todas las estadísticas
 function resetStats(){
+    clearInterval(intervaloAI);//Borro el intervalo  de AI en caso de haaberlo iniciado
     objPuntaje.ganadas = 0;
     objPuntaje.perdidas = 0;
     objPuntaje.empatadas = 0;
@@ -126,6 +150,8 @@ function resetStats(){
     objPuntaje.stats.user_piedra = 0;
     objPuntaje.stats.user_papel = 0;
     objPuntaje.stats.user_tijera = 0;
+    //re-imprimir la pantalla
+    mostrarEstadisticas();
 }
 
 /* --------------------------------

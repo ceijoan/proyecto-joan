@@ -46,3 +46,5 @@ coche.color="rojo";
 coche.encender();
 
 ```
+
+Cuando una `variables` tiene una funcion dentro esa varible tiene nombre de `METODO`

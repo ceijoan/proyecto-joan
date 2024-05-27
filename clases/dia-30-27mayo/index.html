@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+
+
+
+    <script>
+        //POP Elimina el ultimo elemento
+        let array1 = ["joan", "Laura", "Paula", "Teresa", "Tomas"];
+        let ultimoElemento = array1.pop();
+        console.log(ultimoElemento);
+        console.log(array1);
+        //Añade uno o varios elementos al final
+        let array2 = ["joan", "Laura", "Paula", "Teresa", "Tomas"];
+        let agregaElementos = array2.push("Nerea");
+        console.log(agregaElementos);//Trate la cantidad de elementos[6] .LENGTH
+        console.log(array2);
+        //Elimina el primer elemento del array
+        let array3 = ["joan", "Laura", "Paula", "Teresa", "Tomas"];
+        let eliminaPrimElementos =array3.shift();
+        console.log(array3);
+        //unshift añade uno o varios elementos al inicio
+        let array4 = ["joan", "Laura", "Paula", "Teresa", "Tomas"];
+        let agregaInicio =array4.unshift("Nerea", "karol");
+        console.log(agregaInicio);
+        console.log(array4);
+
+
+
+
+//Ejercicio con el ForEach
+        const letras = ["a","b","c","d"];
+        letras.forEach(function(letra){
+            console.log("bucle 1", letra);
+        });
+
+        letras.forEach(letra =>{//este es el mismos que arriba 
+            console.log("bucle 2", letra);
+        });
+        //si necesito el indice lo puedo recibir como segundo parametro
+        letras.forEach((letra,i)=>{
+            console.log("bucle 3", letra,i);
+        });
+        //Todos estos ejemplos son lo mismo!!
+
+        letras.forEach((letra,i)=>{
+            console.log("bucle 4", letra,i);
+            letra = letra.toLocaleUpperCase();
+            console.log("Letra debe mayuscula", letra); //NO FUNCIONA como se espera, no termina escribiendo en el array
+            letras[i] = letra.toLocaleUpperCase(); 
+            console.log("Letra debe mayuscula", letra);//SI FUNCIONA, este si actualiza el array!
+        });
+        console.log(letras);//Aqui es donde se comprueba si funciona o no
+        
+
+
+    </script>
+</body>
+</html>
