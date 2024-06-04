@@ -123,7 +123,7 @@ Sintaxis para simplificar la descripcion
     /* Con esta medida debe pensar que 1 Columna start / 1 fila start / 2 columna end / 2 fila end */
 }
 ```
-### Para simplificar el Contenedor
+### Para Simplificar el Contenedor
 Para que no tengamos que agregar las medidas de cada fila o columna de manera manual, sino que tomen una medida especifica con la medida establecida 
 
 ```css
