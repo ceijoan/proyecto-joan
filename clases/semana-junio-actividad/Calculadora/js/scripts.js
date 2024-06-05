@@ -19,6 +19,7 @@ function obtenerValores(){
 btnSuma.addEventListener("click", ()=>{
   alert("me hicieron clic");  
   obtenerValores();
+  
   resultado=numero1+numero2;
   imprimirResultado();
 });
