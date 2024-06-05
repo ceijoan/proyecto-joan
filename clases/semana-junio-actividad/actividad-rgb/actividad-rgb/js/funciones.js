@@ -16,7 +16,7 @@ function hexadecimal(r,g,b){
     for(let i = 0; i < arguments.length; i++){
          
         codigo.push((Number(arguments[i]) < 16 ? "0" : "") + Number(arguments[i]).toString(16));
-        // console.log(arguments[i]+"Este es indidice que aumenta");
+        // console.log(arguments[i]+"Este es indice que aumenta");
         // console.log(Number(arguments[i]) < 16? "0":  "" ); //Este dice que mientras sea menor a 16 le asigne el valor 0 pero cuando cuanmente deje el campo vacio.
         // console.log(Number(arguments[i]).toString(16)); //Esta parte cambia el numero a string
 
