@@ -2,4 +2,84 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    font-size: 18px;
+    font-family:Verdana, Geneva, Tahoma, sans-serif;
+}
+body{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: 100vh;
+    padding: 40px;
+    gap: 40px;
+}
+.Header{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+.Header-logo{
+    width: 25%;
+}
+.Menu{
+    list-style: none;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 20px;
+}
+.Menu-lista{
+    font-size: 1rem;
+    text-decoration: underline;
+}
+.Contenedor{
+    display: flex;
+    flex-direction: column;
+}
+.Contenedor-parrafo{
+    font-size: 1.5rem;
+    font-weight: 500;
+}
+.Contenedor-cards{
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+    gap: 40px;
+    padding: 40px 0;
+}
+.Contenedor-cards-img{
+    width: 100%;
+    height: 100%;
+}
+.Contenedor-verMas{
+    text-decoration: none;
+    color:#000;
+    text-align: center;
+    font-size: 1.2rem;
+    position: relative;
+    margin: 2% 0;
+}
+.Contenedor-verMas::before{
+    content: url(../assets/ico-send.svg);
+    
+
+}
+.Footer{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    border-top: 1px solid #aaaaaa ;
+    padding: 20px 0;
+}
+.Footer-derechos-p{
+    font-size: 0.8rem;
+    color: #aaaaaa;
+}
+.rrss{
+
+}
+.u-listFooter{
+    text-decoration: none;
 }
