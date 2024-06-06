@@ -11,17 +11,18 @@ const capturaInput2 = document.getElementById("valores2");
 const respuesta = document.querySelector(".respuesta");
 
 function obtenerValores(){
-  numero1 = capturaInput1.value;
-  numero2 = capturaInput2.value;
+  numero1 = parseFloat(capturaInput1.value);
+  numero2 = parseFloat(capturaInput2.value);
 }
 
 
 btnSuma.addEventListener("click", ()=>{
-  alert("me hicieron clic");  
+  //alert("me hicieron clic");  
   obtenerValores();
-  
   resultado=numero1+numero2;
   imprimirResultado();
+  //valor = parseFloat(inpput.value); 
+  //ParseFloat convierte mis numeros en numeros decimales
 });
 
 function imprimirResultado(){
