@@ -108,6 +108,7 @@ El BOM representa el navegador (chrome, safari, firefox, etc) Windows es el obje
 Es un `STRING`.
 Representacion de datos en forma de texto (String) que sigue uan sintaxis especifica , es un formato que facilita la comunicacion entre el backend-frontend, servidores y es fácil de leer para el usuario y fácil de crear para la maquina.
 
+Las propiedades en JSON es obligatorio las comillas, y losarchivos json no reciben funciones.
 
 ```js
     //OBJETOS JAVASCRIP

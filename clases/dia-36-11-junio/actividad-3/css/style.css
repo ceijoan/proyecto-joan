@@ -1,0 +1,32 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.cardsPeliculas{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    gap: 20px;
+}
+.Pelicula{
+    width: 100%;
+    border: 1px solid #000;
+    padding: 2%;
+    text-align: center;
+    cursor: pointer;
+}
+.Pelicula img{
+    width: 100%;
+    height: 400px;
+}
+.popup{
+    display: none;
+    position: absolute;
+    z-index: 1;
+    background: red;
+    width: 300px;
+    height: 300px;
+    top: 50%;
+    left: 50%;
+}
