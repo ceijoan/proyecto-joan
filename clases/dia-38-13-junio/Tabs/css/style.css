@@ -1,0 +1,24 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.tabs-Contenido{
+    display: none;
+}
+.u-visible{
+    display: block;
+}
+.btnTabs{
+    display: flex;
+    flex-direction: row;
+}
+.btn-tab{
+    padding: 10px;
+    background-color: aquamarine;
+    border: 1px solid aquamarine;
+}
+.btn-active{
+    background: #fff;
+    border: 1px solid green;
+}

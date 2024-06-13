@@ -1,0 +1,24 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.Acordeon{
+    border: 1ps solid #000;
+}
+.Acordeon--item{
+    width: 100%;
+    border: 1px solid #000;
+}
+.Acordeon--header{
+    padding: 10px 0;
+}
+
+.Acordeon--content{
+    display: none;
+    background-color: cadetblue;
+    padding: 10px 0;
+}
+.active .Acordeon--content{
+    display: block;    
+}
