@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Slider</title>
+    <style>
+        *{margin: 0; padding: 0; box-sizing: border-box;}
+
+        body{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height:100vh;
+            font-size: 30px;
+        }
+        .slider{
+            overflow: hidden;
+            border: 2px solid #000;
+            border-radius: 10px;
+        }
+        .sliderImg{
+            display: flex;
+            width: 600px;
+            height: 500px;
+            transition:transform 0.5s ease;
+        }
+        .sliderImg img{
+            min-width: 600px;
+            max-width: 600px;
+            min-height: 500px;
+            max-height: 500px;
+            object-fit: contain;
+        }
+    </style>
+</head>
+<body>
+    
+
+
+<div class="slider">
+    <h2>Sklider Show</h2>
+    <div class="sliderImg">
+        <img src="https://picsum.photos/600/500" alt="">
+        <img src="https://picsum.photos/600/501" alt="">
+        <img src="https://picsum.photos/600/502" alt="">
+        <img src="https://picsum.photos/600/503" alt="">
+    </div>
+    <button class="btnAnterior">Anterior</button>
+    <button class="btnSiguiente">Siguiente</button>
+    <div class="slider-contador">
+        <span class="txtActual">X</span>/<span class="txtTotal">XX</span> 
+    </div>
+</div>
+
+
+
+<script>
+    const sliderImages = document.querySelector(".sliderImg");
+    const listImages = document.querySelectorAll(".sliderImg img");
+
+    //botones
+    const btnAnterior = document.querySelector(".btnAnterior");
+    const btnSiguiente = document.querySelector(".btnSiguiente");
+
+    //Contador
+    const spanActual = document.querySelector(".txtActual");
+    const spanTotal = document.querySelector(".txtTotal");
+
+    let indice = 0;
+    const totalImages = listImages.length;
+
+    btnAnterior.addEventListener("click", prevImagen);
+    btnSiguiente.addEventListener("click", nextImagen)
+
+
+    function nextImagen(){
+        indice ++;
+        console.log(indice);
+        console.log(totalImages);
+        if (indice >= totalImages){
+            indice = 0;
+        }
+        actualizarSlider()
+        actualizarContador();
+    }
+    
+    function prevImagen(){
+        indice --;
+        if (indice < 0){
+            indice = totalImages;
+        }
+        actualizarSlider()
+        actualizarContador();
+    }
+
+    function actualizarContador(){
+        spanActual.textContent = indice;
+        
+    }
+    function actualizarSlider(){
+        const width= sliderImages.querySelector('img').clientWidth;
+        sliderImages.style.transform=`translateX(${-width*indice}px)`;
+    }
+    actualizarContador();
+    spanTotal.textContent = totalImages;
+    
+
+    // Intervalos
+
+    let intervalos;
+    agregarIntervalos();
+
+    sliderImages.addEventListener("mouseover", ()=>{
+        clearInterval(intervalos);
+    });
+    sliderImages.addEventListener("mouseout", ()=>{
+        agregarIntervalos();
+    });
+    function agregarIntervalos(){
+        intervalos = setInterval(nextImagen, 1000);
+    }
+    
+</script>
+</body>
+</html>
