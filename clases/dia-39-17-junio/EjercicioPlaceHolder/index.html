@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio Placeholder</title>
+    <style>
+
+    </style>
+</head>
+<body>
+    <div class="listaDeUsuarios">
+
+    </div>
+
+
+
+<script>
+    //Define las variables
+    const divListaUsuarios = document.querySelector(".listaDeUsuarios");
+
+
+
+        async function traerDatos(){
+            try{
+                const jsonUser = await fetch("https://jsonplaceholder.typicode.com/users");
+                const jslistUser = await jsonUser.json();
+                console.log(jslistUser);
+   
+                imprimirdatos(jslistUser);
+
+
+            } catch(error){
+                console.error("Tuve un error ", error);
+            }
+        }
+        function imprimirdatos(jslistUser){
+            jslistUser.forEach(usuario => {
+                const li = document.createElement("div");
+                li.textContent= usuario.name;
+                li.classList= "listaEstilos";
+                divListaUsuarios.appendChild(li);                
+            });
+        };
+    traerDatos();
+</script>
+</body>
+</html>
